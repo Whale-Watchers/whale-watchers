@@ -9,7 +9,12 @@ class Nav extends Component {
   }
 
   render() {
-
+    return(
+    <div id="navContainer">
+      <p>In nav</p>
+      <p>ETH Price:</p>
+    </div>
+    )
   }
 }
 
