@@ -12,12 +12,12 @@ class MainContainer extends Component {
   }
 
   render() {
-    return() {
+    return ( 
       <div id='mainContainer'>
         <DropdownList />
         <Graph />
       </div>
-    };
+    );
   }
 }
 

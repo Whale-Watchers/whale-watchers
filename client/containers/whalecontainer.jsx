@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Holdings from '../components/holdings';
+import Transactions from '../components transactions';
 
 class WhaleContainer extends Component {
   constructor(props) {
@@ -7,6 +9,14 @@ class WhaleContainer extends Component {
       holdings: [],
       transactions: []
     }
+  }
+  render() {
+    return (
+      <div id='whalecontainer'>
+        <Holdings />
+        <Transactions />
+      </div>
+    )
   }
 }
 
