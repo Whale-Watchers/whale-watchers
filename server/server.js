@@ -3,12 +3,14 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const PORT = 3000;
+const apiRouter = require('./routes/api')
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 //app.get('/get', (req, res) => res.status(200).json({ username: 'hello' }));
 
+app.use('/', apiRouter);
 // Catch all for invalid endpoint requests
 app.use('*', (req, res) => res.status(404).json('Invalid request, please wait and try again'));
 
