@@ -1,0 +1,58 @@
+{
+  "name": "whale-watchers",
+  "version": "1.0.0",
+  "description": "Visualize on-chain holdings and transactions of specific users on the Ethereum blockchain.",
+  "main": "esources",
+  "scripts": {
+    "test": "npm test",
+    "start": "cross-env NODE_ENV=production node server/server.js",
+    "build": "cross-env NODE_ENV=production webpack",
+    "dev": "concurrently \"NODE_ENV=development nodemon server/server.js\" \"NODE_ENV=development webpack serve\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Whale-Watchers/whale-watchers.git"
+  },
+  "keywords": [
+    "etherum",
+    "blockchain"
+  ],
+  "author": "Maxwell Shick <https://github.com/mshick97>, Jakob <https://github.com/gandalf77>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Whale-Watchers/whale-watchers/issues"
+  },
+  "homepage": "https://github.com/Whale-Watchers/whale-watchers#readme",
+  "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
+    "babel-loader": "^8.2.5",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
+    "sass": "^1.52.2",
+    "sass-loader": "^13.0.0",
+    "style-loader": "^3.3.1",
+    "url-loader": "^4.1.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-config": "^7.5.0",
+    "webpack-dev-server": "^4.9.2"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.8.3",
+    "axios": "^0.27.2",
+    "concurrently": "^7.2.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16",
+    "pg": "^8.7.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "^5.0.1",
+    "webpack": "^5.73.0"
+  }
+}
