@@ -4,7 +4,7 @@ class Holdings extends Component {
     render() {
         return(
             <div id="Holdings">
-                Holdings
+               Holdings
             </div>
         );
     }

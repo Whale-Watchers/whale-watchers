@@ -13,6 +13,7 @@ export default function DropdownList() {
   };
 
   return (
+    <div id='dropdown'>
     <Box sx={{ minWidth: 300 }}>
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">Age</InputLabel>
@@ -29,5 +30,6 @@ export default function DropdownList() {
         </Select>
       </FormControl>
     </Box>
+    </div>
   );
 }

@@ -4,7 +4,7 @@ class Graph extends Component {
     render() {
         return(
             <div id="Graph">
-                Graph
+               Graph
             </div>
         );
     }

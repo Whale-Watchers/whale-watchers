@@ -2,6 +2,8 @@
 import React, { Component } from 'react';
 import DropdownList from '../components/dropdownlist';
 import Graph from '../components/graph';
+import Holdings from '../components/holdings';
+import Transactions from '../components/transactions';
 
 class MainContainer extends Component {
   constructor(props) {
@@ -15,7 +17,9 @@ class MainContainer extends Component {
     return ( 
       <div id='mainContainer'>
         <DropdownList />
-        <Graph />
+        {this.state.loginStatus === true ? <Graph /> : (this.state.loginStatus === false ? <WhaleContainer /> : <Dashboard />)}
+        <Holdings />
+        <Transactions />
       </div>
     );
   }
