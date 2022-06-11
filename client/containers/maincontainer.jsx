@@ -9,7 +9,8 @@ class MainContainer extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      graphData: [] // just intitializing layout, change anything needed
+      graphData: [], // just intitializing layout, change anything needed
+      loginStatus: false
     }
   }
 
@@ -17,7 +18,8 @@ class MainContainer extends Component {
     return ( 
       <div id='mainContainer'>
         <DropdownList />
-        {this.state.loginStatus === true ? <Graph /> : (this.state.loginStatus === false ? <WhaleContainer /> : <Dashboard />)}
+        {/* {this.state.loginStatus === true ? <Graph /> : (this.state.loginStatus === false ? <Holdings /> : <Transactions />)} */}
+        <Graph /> 
         <Holdings />
         <Transactions />
       </div>
