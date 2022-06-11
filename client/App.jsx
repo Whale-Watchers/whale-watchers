@@ -7,8 +7,9 @@ import WhaleContainer from './containers/whalecontainer.jsx';
 const App = () => {
   return (
     <div id="app">
-      <h1>Hello World</h1>
       <Nav />
+      <MainContainer />
+      <WhaleContainer />
       {/* <Routes>
         <Route path="/" element={<MainContainer />} />
         <Route path="/whale" element={<WhaleContainer />} />

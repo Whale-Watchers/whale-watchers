@@ -1,0 +1,35 @@
+@import '_variables.scss';
+@import '_nav.scss';
+@import '_main.scss';
+@import '_whale.scss';
+
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+#app{}
+
+#navContainer, #whaleContainer, #mainContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 15px;
+  margin-right: 25px;
+  border: 1px solid lightgray;
+}
+
+#navContainer {
+  
+}
+
+#mainContainer{
+  height: 400px;
+  width: 95%;  
+}
+
+#whaleContainer{
+  height: 400px;
+  width: 95%;  
+}
+
