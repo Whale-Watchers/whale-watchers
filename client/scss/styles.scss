@@ -4,11 +4,14 @@
 @import '_transactions.scss';
 @import '_home.scss';
 @import '_holdings.scss';
+@import '_graph.scss';
 
 
 body {
   font-family: 'DM Sans', sans-serif;
   background: url('https://img.freepik.com/free-vector/blue-pink-halftone-background_53876-99004.jpg?w=2000');
+  // background-color: #c1e8f9;
+  // background-image: linear-gradient(315deg,#96a7cf 0%, #c1e8f9 74%);
   padding: 0;
   margin: 0;
 }

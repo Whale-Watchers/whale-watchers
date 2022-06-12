@@ -71,41 +71,23 @@ class Graph extends Component {
         return (
             <div id="Graph">
                 <Plot
-                    // data={[
-                    //     {
-                    //         x: x_axis,
-                    //         y: [2, 6, 3],
-                    //         type: 'scatter',
-                    //         mode: 'lines+markers',
-                    //         marker: { color: 'darkblue' },
-                    //     },
-                    //     { type: 'bar', x: [1, 2, 3], y: [2, 5, 3], marker: { color: 'lightblue' }, },
-                    // ]}
-                    // layout={{ width: 420, height: 240, title: `${this.state.whale}` }}
+                    data={[
+                      {
+                        x: ['10/28/2021', '11/1/2021', '11/1/2021', '12/1/2021', '1/22/2022'],
+                        y: [1, 1, 1, 2, 2, 2],
+                        type: 'scatter',
+                        mode: 'lines+markers',
+                        marker: {color: 'darkblue'},
+                        name: 'Bored Ape Yacht Club'
+                      },
+                      {type: 'line', x: ['10/28/2021', '11/1/2021', '11/1/2021', '12/1/2021', '1/22/2022'], y: [0, 1, 2, 2, 2, 2], marker: {color: 'orange'}, name: 'Mutant Ape Yacht Club'
+                      },
+                      {type: 'line', x: ['10/28/2021', '11/1/2021', '11/1/2021', '12/1/2021', '1/22/2022'], y: [0, 0, 0, 0, 1, 2], marker: {color: 'purple'}, name: 'SharkMob'
+                      }
+                    ]}
+                    layout={ {width: '70%', height: '70%', autosize: true, responsive: true, title: 'Snoop Dogg'} }
+                  />
 
-                    // {const BoredApeYachtClub = {
-                    //     // x: x_axis,
-                    //     "x": ['10/28/2021', '11/1/2021', '11/1/2021', '12/1/2021', '1/22/2022'],
-                    //     "y": [1, 1, 1, 2, 2, 2],
-                    //     "type": 'line'
-                    // }
-
-                    // const MutantApeYachtClub = {
-                    //     "x": ['10/28/2021', '11/1/2021', '11/1/2021', '12/1/2021', '1/22/2022'],
-                    //     "y": [0, 1, 2, 2, 2, 2],
-                    //     "type": 'line'
-                    // }
-
-                    // const SharkMob = {
-                    //     "x": ['10/28/2021', '11/1/2021', '11/1/2021', '12/1/2021', '1/22/2022'],
-                    //     "y": [0, 0, 0, 0, 1, 2],
-                    //     "type": 'line'
-                    // }
-
-                    // const data = [BoredApeYachtClub, MutantApeYachtClub, SharkMob];
-
-                    // Plotly.newPlot('Graph', data);}
-                />
             </div>
         );
     }
