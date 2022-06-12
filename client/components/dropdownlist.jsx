@@ -24,9 +24,9 @@ export default function DropdownList() {
             label="Select a Whale"
             onChange={handleChange}
           >
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
+            <MenuItem value={10}>Snoop Dogg</MenuItem>
+            <MenuItem value={20}>Gary Vaynerchuk</MenuItem>
+            <MenuItem value={30}>Jay Z</MenuItem>
           </Select>
         </FormControl>
       </Box>
