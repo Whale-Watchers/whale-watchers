@@ -4,6 +4,9 @@ import HomeCard from "./homecards";
 class Home extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      cardData: null
+    }
   }
 
   render() {
