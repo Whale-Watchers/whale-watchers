@@ -1,3 +1,4 @@
+const fs = require('fs');
 const express = require('express');
 const router = express.Router();
 const etherscanController = require('../controllers/etherscanController');
@@ -13,6 +14,14 @@ router.get(
         res.status(200).json(res.locals.allTransactions)
     }
 )   
+
+router.get(
+    '/dataDump',
+    etherscanController.dataDump,
+    (req, res) => {
+      res.status(200).json({worked: 'worked'})
+    }
+);
 
 // get holdings at timestamp for address
 
