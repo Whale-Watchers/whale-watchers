@@ -1,35 +1,36 @@
 @import '_variables.scss';
 @import '_nav.scss';
 @import '_main.scss';
-@import '_whale.scss';
+@import '_transactions.scss';
+@import '_home.scss';
+@import '_holdings.scss';
+
 
 body {
   font-family: 'DM Sans', sans-serif;
+  background: url('https://img.freepik.com/free-vector/blue-pink-halftone-background_53876-99004.jpg?w=2000');
+  padding: 0;
+  margin: 0;
 }
 
-#app{}
+#app {}
 
-#navContainer, #whaleContainer, #mainContainer {
+#navContainer {
+  background-color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-left: 15px;
-  margin-right: 25px;
-  border: 1px solid lightgray;
+  padding-left: 35px;
+  padding-right: 45px;
+  padding-top: 5px;
 }
 
-#navContainer {
-  
-}
-
-#mainContainer{
+#mainContainer {
   height: 400px;
-  width: 95%;  
+  width: 95%;
+  display: flex;
+  flex-direction: column;
 }
 
-#whaleContainer{
-  height: 400px;
-  width: 95%;  
-}
-
+#toggleCompButtonsContainer {}

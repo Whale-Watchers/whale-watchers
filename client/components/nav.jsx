@@ -10,24 +10,28 @@ class Nav extends Component {
   }
 
   async componentDidMount() {
-    const url = '';
-    // await axios.get(url).then(res => {
-    //   this.setState({ethPrice: res.data });
-    // });
+    const url = 'https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD&api_key={215c83221e15d164882ccf35f709ef2266294181012119fd54c5c30436cfc9ff}';
+    await axios.get(url).then(res => {
+      this.setState({ ethPrice: res.data.USD });
+    });
   }
 
   render() {
-    return(
-    <div id="navContainer">
-      <h1>W H A L E</h1>
-      <div className='ethNavWrapper'>
-        <img
-        src={'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/1257px-Ethereum_logo_2014.svg.png'}
-        id='ethLogo'
-        />
-        <h3>ETH Price: {this.state.ethPrice}</h3>
+    return (
+      <div id="navContainer">
+        <div id='brandingWrapper'>
+          <h1>W H A L E</h1>
+          <img src={'https://www.svgheart.com/wp-content/uploads/2021/11/whale-silhouette-sea-free-svg-file-SvgHeart.Com.png'} id='whaleLogo' />
+        </div>
+
+        <div className='ethNavWrapper'>
+          <img
+            src={'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/1257px-Ethereum_logo_2014.svg.png'}
+            id='ethLogo'
+          />
+          <h3>ETH / USD: ${this.state.ethPrice}</h3>
+        </div>
       </div>
-    </div>
     )
   }
 }
