@@ -10,3 +10,14 @@
   height: 25px;
   margin-right: 10px;
 }
+
+#brandingWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#whaleLogo {
+  height: 40px;
+  margin-left: 12px;
+}

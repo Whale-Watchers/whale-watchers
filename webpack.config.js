@@ -57,8 +57,9 @@ module.exports = {
      * disable live reload on the browser. "hot" must be set to false for this to work
     */
     liveReload: true,
+    historyApiFallback: true, // fall back to entry path every time it loads for react router
     proxy: {
-      '/': 'http://localhost:3000'
+      '/': 'http://localhost:3000',
     },
   },
   resolve: {

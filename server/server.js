@@ -12,7 +12,7 @@ app.use(cors());
 
 app.use('/', apiRouter);
 // Catch all for invalid endpoint requests
-app.use('*', (req, res) => res.status(404).json('Invalid request, please wait and try again'));
+app.use('*', (req, res) => res.status(404).json('Invalid request, please try again'));
 
 // Global error handler
 app.use((err, req, res) => {

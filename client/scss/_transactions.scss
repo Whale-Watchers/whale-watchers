@@ -1,0 +1,15 @@
+#transactionsContainer {
+  max-width: 95%;
+}
+
+#tableHeadingsWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100%;
+}
+
+.tableHeading {
+  height: 30px;
+  margin: 10px 0px;
+  border-bottom: #CCCCCC solid .5px;
+}
