@@ -3,7 +3,6 @@ const router = express.Router();
 const etherscanController = require('../controllers/etherscanController');
 const pricingController = require('../controllers/pricingController');
 
-
 // get all transactions upto present for address
 
 router.get(
