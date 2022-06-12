@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import logo from '../docs/logo/WW_1.jpg';
 
 class Nav extends Component {
   constructor(props) {
@@ -21,7 +22,7 @@ class Nav extends Component {
       <div id="navContainer">
         <div id='brandingWrapper'>
           <h1>W H A L E</h1>
-          <img src={'https://www.svgheart.com/wp-content/uploads/2021/11/whale-silhouette-sea-free-svg-file-SvgHeart.Com.png'} id='whaleLogo' />
+          <a href='/'><img src={logo} id='whaleLogo' /></a>
         </div>
 
         <div className='ethNavWrapper'>
