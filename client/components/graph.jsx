@@ -7,7 +7,7 @@ class Graph extends Component {
         this.state = {
             whale: "Snoop Dogg (A.K.A. Cozomo de’ Medici)",
             wallet: "0xCe90a7949bb78892F159F428D0dC23a8E3584d75",
-            data: {
+            time_series: {
                 "1635471569":
                 {   
                     "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d": "VALUE",
@@ -58,12 +58,12 @@ class Graph extends Component {
     async componentDidMount() {
 
         // get time stamps
-        let x_axis = [];
-        for (timeStamp of Object.keys(this.state.data)) {
+        const x_axis = [];
+        for (timeStamp of Object.keys(this.state.time_series)) {
             const date = new Date(timeStamp * 1000).toLocaleDateString('en-US');
             const time = new Date(timeStamp * 1000).toLocaleTimeString('en-US');
             // x.push([date, time]);
-            x.push(date);
+            x_axis.push(date);
         }
     }
 
@@ -71,17 +71,40 @@ class Graph extends Component {
         return (
             <div id="Graph">
                 <Plot
-                    data={[
-                        {
-                            x: x_axis,
-                            y: [2, 6, 3],
-                            type: 'scatter',
-                            mode: 'lines+markers',
-                            marker: { color: 'darkblue' },
-                        },
-                        { type: 'bar', x: [1, 2, 3], y: [2, 5, 3], marker: { color: 'lightblue' }, },
-                    ]}
-                    layout={{ width: 420, height: 240, title: `${this.state.whale}` }}
+                    // data={[
+                    //     {
+                    //         x: x_axis,
+                    //         y: [2, 6, 3],
+                    //         type: 'scatter',
+                    //         mode: 'lines+markers',
+                    //         marker: { color: 'darkblue' },
+                    //     },
+                    //     { type: 'bar', x: [1, 2, 3], y: [2, 5, 3], marker: { color: 'lightblue' }, },
+                    // ]}
+                    // layout={{ width: 420, height: 240, title: `${this.state.whale}` }}
+
+                    // {const BoredApeYachtClub = {
+                    //     // x: x_axis,
+                    //     "x": ['10/28/2021', '11/1/2021', '11/1/2021', '12/1/2021', '1/22/2022'],
+                    //     "y": [1, 1, 1, 2, 2, 2],
+                    //     "type": 'line'
+                    // }
+
+                    // const MutantApeYachtClub = {
+                    //     "x": ['10/28/2021', '11/1/2021', '11/1/2021', '12/1/2021', '1/22/2022'],
+                    //     "y": [0, 1, 2, 2, 2, 2],
+                    //     "type": 'line'
+                    // }
+
+                    // const SharkMob = {
+                    //     "x": ['10/28/2021', '11/1/2021', '11/1/2021', '12/1/2021', '1/22/2022'],
+                    //     "y": [0, 0, 0, 0, 1, 2],
+                    //     "type": 'line'
+                    // }
+
+                    // const data = [BoredApeYachtClub, MutantApeYachtClub, SharkMob];
+
+                    // Plotly.newPlot('Graph', data);}
                 />
             </div>
         );
