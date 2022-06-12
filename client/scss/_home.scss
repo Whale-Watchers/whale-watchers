@@ -1,5 +1,14 @@
-#homeContainer {
+#cardWrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   row-gap: 50px;
+  column-gap: 25px;
+  margin-bottom: 30px;
+}
+
+#paginationWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }

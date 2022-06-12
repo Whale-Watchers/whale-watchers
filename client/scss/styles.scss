@@ -1,22 +1,22 @@
-@import '_variables.scss';
 @import '_nav.scss';
 @import '_main.scss';
 @import '_transactions.scss';
 @import '_home.scss';
 @import '_holdings.scss';
 @import '_graph.scss';
+@import '_homecard.scss';
 
 
 body {
   font-family: 'DM Sans', sans-serif;
-  background: url('https://img.freepik.com/free-vector/blue-pink-halftone-background_53876-99004.jpg?w=2000');
+  background: url('./WhaleWatchersBG.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
   // background-color: #c1e8f9;
-  // background-image: linear-gradient(315deg,#96a7cf 0%, #c1e8f9 74%);
+  // background-image: linear-gradient(315deg, #96a7cf 0%, #c1e8f9 74%);
   padding: 0;
   margin: 0;
 }
-
-#app {}
 
 #navContainer {
   background-color: white;
@@ -30,10 +30,23 @@ body {
 }
 
 #mainContainer {
-  height: 400px;
-  width: 95%;
   display: flex;
   flex-direction: column;
 }
 
-#toggleCompButtonsContainer {}
+#isLoadingWrapper {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#appContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 50px;
+  padding-top: 40px;
+  background-color: white;
+}

@@ -1,66 +1,52 @@
 // stateful component
 import React, { Component } from 'react';
-import { Route, Routes, useNavigate } from "react-router-dom";
 import { Button } from '@mui/material';
-import Home from '../components/home';
-import DropdownList from '../components/dropdownlist';
-import Graph from '../components/graph';
-import Holdings from '../components/holdings';
-import Transactions from '../components/transactions';
+import { Navigate } from 'react-router-dom';
 
-// class MainContainer extends Component {
-//   constructor(props) {
-//     super(props)
-//     this.state = {
-//       graphData: [] // just intitializing layout, change anything needed
-//     }
-//   }
-function MainContainer() {
-  let navigate = useNavigate();
-  return (
-    <div id='mainContainer'>
-      <div id='dropdownWrapper'>
-        <DropdownList />
-      </div>
+class MainContainer extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      graphData: ['hello I am state in the MainContainer component']
+    }
+  }
 
-      <div id='mainWrapper'>
+  render() {
+    const { navigate } = this.props;
+    return (
+      <div id='mainContainer'>
 
-        <div id='toggleCompButtonsWrapper'>
-          <Button
-            id='graphButton'
-            className='toggleButton'
-            onClick={() => {
-              navigate('/graph');
-            }}>Graph</Button>
+        <div id='appContainer'>
+          <div id='toggleCompButtonsWrapper'>
+            <Button
+              id='graphButton'
+              className='toggleButton'
+              onClick={() => {
+                // <Navigate to='/graph' state={this.state} />
+                return navigate('/graph', this.state);
+              }}>Graph</Button>
 
-          <Button
-            id='holdingsButton'
-            className='toggleButton'
-            onClick={() => {
-              navigate('/holdings');
-            }}>Holdings</Button>
+            <Button
+              id='holdingsButton'
+              className='toggleButton'
+              onClick={() => {
+                // <Navigate to='/holdings' state={this.state} />
+                return navigate('/holdings', this.state);
+              }}>Holdings</Button>
 
-          <Button
-            id='transactionsButton'
-            className='toggleButton'
-            onClick={() => {
-              navigate('/transactions');
-            }}>Transactions</Button>
+            <Button
+              id='transactionsButton'
+              className='toggleButton'
+              onClick={() => {
+                // <Navigate to='/transactions' state={this.state} />
+                return navigate('/transactions', this.state);
+              }}>Transactions</Button>
+          </div>
+
         </div>
-
-        <div id='componentWrapper'> {/* should edit to be the home page full of whale cards eventually */}
-          <Routes>
-            <Route exact path='/transactions' element={<Transactions />}></Route>
-            <Route exact path='/holdings' element={<Holdings />}></Route>
-            <Route exact path='/graph' element={<Graph />}></Route>
-            <Route exact path='/' element={<Home />}></Route>
-          </Routes>
-        </div>
-
       </div>
-
-    </div>
-  );
+    );
+  }
 }
 
 export default MainContainer;

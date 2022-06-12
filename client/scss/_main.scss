@@ -6,9 +6,9 @@
   justify-content: flex-start;
   align-items: flex-start;
   margin-top: 50px;
-  background-color: transparent;
+  background-color: white;
   min-height: 70vh;
-  padding-top: 40px;
+  padding-top: 50px;
   padding-left: 20px;
 }
 
@@ -29,11 +29,12 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 20%;
 }
 
 // Have to overwrite the MUI styling in the listed ways below
 .toggleButton {
-  margin: 10px 40px !important;
+  margin: 10px 0px 10px 50px !important;
   border: 2px #156C98 solid !important;
   min-width: 150px !important;
   max-width: 150px !important;
