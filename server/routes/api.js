@@ -1,27 +1,23 @@
-const fs = require('fs');
-const express = require('express');
+const fs = require("fs");
+const express = require("express");
 const router = express.Router();
-const etherscanController = require('../controllers/etherscanController');
-const pricingController = require('../controllers/pricingController');
+const etherscanController = require("../controllers/etherscanController");
+const pricingController = require("../controllers/pricingController");
 
 // get all transactions upto present for address
 
 router.get(
-    '/getTransactions/:address',
-    etherscanController.get721Transactions,
-    etherscanController.get20Transactions,
-    (req, res) => {
-        res.status(200).json(res.locals.allTransactions)
-    }
-)   
-
-router.get(
-    '/dataDump',
-    etherscanController.dataDump,
-    (req, res) => {
-      res.status(200).json({worked: 'worked'})
-    }
+  "/getTransactions/:address",
+  etherscanController.get721Transactions,
+  etherscanController.get20Transactions,
+  (req, res) => {
+    res.status(200).json(res.locals.allTransactions);
+  }
 );
+
+router.get("/dataDump/:address", etherscanController.dataDump, (req, res) => {
+  res.status(200).json({ worked: "worked" });
+});
 
 // get holdings at timestamp for address
 
@@ -47,7 +43,6 @@ router.get(
     }
 )
 */
-
 
 // router.get('/getTimes', etherscanController.getTimes, (req, res) => {
 //     res.status(200).json(res.locals.times);
