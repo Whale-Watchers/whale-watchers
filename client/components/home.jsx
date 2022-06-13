@@ -60,9 +60,6 @@ class Home extends Component {
           <div id='cardWrapper'>
             {cardsDisplay}
           </div>
-          {/* <Stack spacing={2}>
-            <Pagination count={6} color="primary" />
-          </Stack> */}
         </div>
       </div>
     )
