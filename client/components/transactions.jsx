@@ -121,8 +121,159 @@ class Transactions extends Component {
               "tokenImage": "https://img-ae.seadn.io/https%3A%2F%2Flh3.googleusercontent.com%2FiofetZEyiEIGcNyJKpbOafb_efJyeo7QOYnTog8qcQJhqoBU-Vu9l3lXidZhXOAdu6dj4fzWW6BZDU5vLseC-K03rMMu-_j2LvwcbHo%3Ds10000?fit=max&h=120&w=120&auto=format&s=ff2900e7a1682f22ab0e57992b0223bf"
           }
         ];
+        const erc20Images = 
+        [
+          {
+            "contractAddress": "",
+            "tokenSymbol": "ETH",
+            "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png"
+          },
+          {
+            "contractAddress": "0x6b175474e89094c44da98b954eedeac495271d0f",
+            "tokenSymbol": "DAI",
+            "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/4943.png"
+          },
+          {
+            "contractAddress": "0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce",
+            "tokenSymbol": "SHIB",
+            "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/5994.png"
+          },
+          {
+            "contractAddress": "0x3845badAde8e6dFF049820680d1F14bD3903a5d0",
+            "tokenSymbol": "SAND",
+            "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/6210.png"
+          },
+          {
+            "contractAddress": "0xf629cbd94d3791c9250152bd8dfbdf380e2a3b9c",
+            "tokenSymbol": "ENJ",
+            "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/2130.png"
+          },
+          {
+            "contractAddress": "0x3a4f40631a4f906c2BaD353Ed06De7A5D3fCb430",
+            "tokenSymbol": "PLA",
+            "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/7461.png"
+          },
+          {
+            "contractAddress": "0x3a4f40631a4f906c2BaD353Ed06De7A5D3fCb430",
+            "tokenSymbol": "PLA",
+            "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/7461.png"
+          },
+          {
+            "contractAddress": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+            "tokenSymbol": "USDT",
+            "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/825.png"
+          },
+          {
+            "contractAddress": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "tokenSymbol": "USDC",
+            "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png"
+          },
+          {
+            "contractAddress": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+            "tokenSymbol": "WBTC",
+            "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/3717.png"
+          },
+          {
+            "contractAddress": "0x50d1c9771902476076ecfc8b2a83ad6b9355a4c9",
+            "tokenSymbol": "FTT",
+            "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/4195.png"
+          },
+          {
+            "contractAddress": "0xa0b73e1ff0b80914ab6fe0444e65848c4c34450b",
+            "tokenSymbol": "CRO",
+            "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/3635.png"
+          },
+          {
+            "contractAddress": "0x514910771af9ca656af840dff83e8264ecf986ca",
+            "tokenSymbol": "LINK",
+            "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/1975.png"
+          },
+          {
+            "contractAddress": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+            "tokenSymbol": "UNI",
+            "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/7083.png"
+          },
+          {
+            "contractAddress": "0x5c147e74D63B1D31AA3Fd78Eb229B65161983B2b",
+            "tokenSymbol": "FLOW",
+            "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/4558.png"
+          },
+          {
+            "contractAddress": "0x0f5d2fb29fb7d3cfee444a200298f468908cc942",
+            "tokenSymbol": "MANA",
+            "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/1966.png"
+          },
+          {
+            "contractAddress": "0xdb0acc14396d108b3c5574483acb817855c9dc8d",
+            "tokenSymbol": "EMB",
+            "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/9626.png"
+          },
+          {
+            "contractAddress": "0xdb0acc14396d108b3c5574483acb817855c9dc8d",
+            "tokenSymbol": "EMB",
+            "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/9626.png"
+          },
+          {
+            "contractAddress": "0x61107a409fffe1965126aa456af679719695c69c",
+            "tokenSymbol": "UMI",
+            "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/12737.png"
+          },
+          {
+            "contractAddress": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+            "tokenSymbol": "ENS",
+            "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/13855.png"
+          },
+          {
+            "contractAddress": "0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0",
+            "tokenSymbol": "MATIC",
+            "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png"
+          },
+          {
+            "contractAddress": "0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0",
+            "tokenSymbol": "MATIC",
+            "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png"
+          },
+          {
+            "contractAddress": "0x4d224452801aced8b2f0aebe155379bb5d594381",
+            "tokenSymbol": "APE",
+            "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/18876.png"
+          },
+          {
+            "contractAddress": "0x4d224452801aced8b2f0aebe155379bb5d594381",
+            "tokenSymbol": "APE",
+            "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/18876.png"
+          },
+          {
+            "contractAddress": "0x407a3e019c655b779ccd098ff50377e4c5f1c334",
+            "tokenSymbol": "OTHR",
+            "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/20454.png"
+          },
+          {
+            "contractAddress": "0xa2cd3d43c775978a96bdbf12d733d5a1ed94fb18",
+            "tokenSymbol": "XCN",
+            "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/18679.png"
+          },
+          {
+            "contractAddress": "0xbbbbca6a901c926f240b89eacb641d8aec7aeafd",
+            "tokenSymbol": "LRC",
+            "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/1934.png"
+          },
+          {
+            "contractAddress": "0xc944e90c64b2c07662a292be6244bdf05cda44a7",
+            "tokenSymbol": "GRT",
+            "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/6719.png"
+          },
+          {
+            "contractAddress": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+            "tokenSymbol": "AAVE",
+            "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/7278.png"
+          }
+        ];
+
         if(this.state.data !== null){
+          const jayZwalletAddress = '0x3b417faee9d2ff636701100891dc2755b5321cc3';
           const transactions = [];
+          
           this.state.data.forEach(element=> {
             let result;
             nftprices.forEach(prices => {
@@ -131,9 +282,66 @@ class Transactions extends Component {
             if(result) return transactions.push(result);
             //return result;
           });
-          console.log('filtered transactions-->',transactions)
+          
+          this.state.data.forEach(transaction => {
+            let result;
+            erc20Images.forEach(erc20 => {
+              if(transaction.contractAddress === erc20.contractAdress) return result = transaction
+            });
+            if(result) return transactions.push(result);
+            //return result;
+          });
+
+
+          console.log('filtered transactions-->',this.state.data)
           sample = this.state.data.map(transactions => {
-           return <p>{transactions.timeStamp}</p>
+            const date = new Date(transactions.timeStamp * 1000).toLocaleDateString('en-US');
+            const time = new Date(transactions.timeStamp * 1000).toLocaleTimeString('en-US');
+            if(transactions.contractAddress === "" && transactions.to === jayZwalletAddress) {
+                return(
+                <div className='transactions_row'>
+                <p>{`${date} ${time}`}</p>
+                <p>ETH</p>
+                <p>Buy</p>
+                </div>
+                )
+            }
+            else if(transactions.contractAddress === "" && transactions.from === jayZwalletAddress) {
+             return( <div className="transactions_row">
+              <p>{`${date} ${time}`}</p>
+              <p>ETH</p>
+              <p>Sell</p>
+              </div>
+             )
+          }
+          
+          else if (transactions.to === jayZwalletAddress) {
+            return(
+              <div className='transactions_row'>
+              <p>{`${date} ${time}`}</p>
+              <p>{transactions.tokenName}</p>
+              <p>Buy</p>
+              </div>
+              )
+          }
+
+          else if (transactions.from === jayZwalletAddress) {
+            return(
+              <div className='transactions_row'>
+              <p>{`${date} ${time}`}</p>
+              <p>{transactions.tokenName}</p>
+              <p>Sell</p>
+              </div>
+              )
+          }
+
+
+
+           return (
+            <div>
+
+           <p>{transactions.timeStamp}</p>
+           </div>)
           })
           console.log(sample)
         }
@@ -163,6 +371,75 @@ filter for the top coins from the NFT JSON file
 //ele.timeStamp
 //ele.to BUY
 //ele.from
+
+ETH Transaction example
+  {
+    "blockNumber": "12241461",
+    "timeStamp": "1618447160",
+    "hash": "0x84c0a71535184a140aa7389e5290c5ea82e4f7d0908459139d8161bdb97283df",
+    "nonce": "0",
+    "blockHash": "0xd3af80fa823024945d29df741e9c1ca24b2155471b9443ee56b78a479496567f",
+    "transactionIndex": "183",
+    "from": "0xe95ccf284efe70f1381952a687fd7bc95d9cc2b7",
+    "to": "0x3b417faee9d2ff636701100891dc2755b5321cc3",
+    "value": "6149279920000000000",
+    "gas": "21000",
+    "gasPrice": "143000000000",
+    "isError": "0",
+    "txreceipt_status": "1",
+    "input": "0x",
+    "contractAddress": "",
+    "cumulativeGasUsed": "7817950",
+    "gasUsed": "21000",
+    "confirmations": "2710385"
+  },
+
+ERC20 Transaction example
+
+ {
+    "blockNumber": "13046292",
+    "timeStamp": "1629250442",
+    "hash": "0x211ed14e479328f20d99cab6ecc732db02b4f4c0d0e68ffa869f6949d6f93256",
+    "nonce": "433",
+    "blockHash": "0x1fe3a063683b8546e40c0215652d69dc464b7c8c6578e1699c39f6b82ebfd868",
+    "from": "0x761037a6d0863c0dca45f6dc783f2127f00f7f40",
+    "contractAddress": "0xdb0acc14396d108b3c5574483acb817855c9dc8d",
+    "to": "0x3b417faee9d2ff636701100891dc2755b5321cc3",
+    "value": "44400000000",
+    "tokenName": "Emblem",
+    "tokenSymbol": "EMB",
+    "tokenDecimal": "8",
+    "transactionIndex": "35",
+    "gas": "81400",
+    "gasPrice": "67000000000",
+    "gasUsed": "54267",
+    "cumulativeGasUsed": "2835533",
+    "input": "deprecated",
+    "confirmations": "1905554"
+  },
+
+ERC721 Transaction example
+{
+    "blockNumber": "12703694",
+    "timeStamp": "1624629835",
+    "hash": "0x9c04def73979c0e5157b86871d66a940ce1bf10176f054fd52ba4af9fbd1124b",
+    "nonce": "235",
+    "blockHash": "0x868777ac0ab15d960b8e3fd2464f14f808b2bde74f836f56374a97ac5354b39e",
+    "from": "0xd0032a23ba9a998d472f71c6c55e493197c96ab8",
+    "contractAddress": "0x74a69df3adc7235392374f728601e49807de4b30",
+    "to": "0x3b417faee9d2ff636701100891dc2755b5321cc3",
+    "tokenID": "1409",
+    "tokenName": "Misfit University Official",
+    "tokenSymbol": "MU",
+    "tokenDecimal": "0",
+    "transactionIndex": "176",
+    "gas": "62605",
+    "gasPrice": "33000000000",
+    "gasUsed": "62605",
+    "cumulativeGasUsed": "11600403",
+    "input": "deprecated",
+    "confirmations": "2241778"
+},
 
 
 */

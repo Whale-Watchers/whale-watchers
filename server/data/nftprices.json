@@ -3,109 +3,103 @@
     "name" : "CryptoPunks",
     "price"	: "48.24",
     "contractAddress": "0xb47e3cd837ddf8e4c57f05d70ab865de6e193bbb",
-    "tokenImage": "https://img-ae.seadn.io/https%3A%2F%2Flh3.googleusercontent.com%2FBdxvLseXcfl57BiuQcQYdJ64v-aI8din7WPk0Pgo3qQFhAUH-B6i-dCqqc_mCkRIzULmwzwecnohLhrcH8A9mpWIZqA7ygc52Sr81hE%3Ds10000?fit=max&h=120&w=120&auto=format&s=5eab9dfe19106ac590e683947112951b"
+    "tokenImage": "https://img.seadn.io/files/8f9108cbbae163f656406ef5826b47d4.png?fit=max&auto=format"
   },
   {
     "name" : "Bored Ape Yacht Club",
     "price"	: "83.00",
     "contractAddress": "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d",
-    "tokenImage": "https://img-ae.seadn.io/https%3A%2F%2Flh3.googleusercontent.com%2FJu9CkWtV-1Okvf45wo8UctR-M9He2PjILP0oOvxE89AyiPPGtrR3gysu1Zgy0hjd2xKIgjJJtWIc0ybj4Vd7wv8t3pxDGHoJBzDB%3Ds10000?fit=max&h=120&w=120&auto=format&s=9719c84d198704a4b1bf7519f6f52256"
+    "tokenImage": "https://img.seadn.io/files/23849c1670acb9074d937496770589bf.png?fit=max&auto=format&w=600"
   },
   {
     "name" : "Mutant Ape Yacht Club",
     "price"	: "16.59",
     "contractAddress" : "0x60e4d786628fea6478f785a6d7e704777c86a7c6",
-    "tokenImage": "https://img-ae.seadn.io/https%3A%2F%2Flh3.googleusercontent.com%2FlHexKRMpw-aoSyB1WdFBff5yfANLReFxHzt1DOj_sg7mS14yARpuvYcUtsyyx-Nkpk6WTcUPFoG53VnLJezYi8hAs0OxNZwlw6Y-dmI%3Ds10000?fit=max&h=120&w=120&auto=format&s=d21114ca201b6479e28180b672436109"
+    "tokenImage": "https://img.seadn.io/files/09492206401c12851d15dca10e5d5012.png?fit=max&auto=format&w=600"
 },
 {
     "name" : "Art Blocks",
     "price"	: "73.00",
     "contractAddress" : "0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270",
-    "tokenImage": "https://lh3.googleusercontent.com/1yWU9TTxsdpsdCGCHlHJ3BIfVgaQXFUZZCLimWSnQPC_SEokZgZGT6SksC5UibBJZrnnvQmr1zVQWFCSb3wL7s_l97wf2zPstC3XNA=w600"
+    "tokenImage": "https://lh3.googleusercontent.com/jBYMYwLIpx6ZPsmAPto-UVMAdks2py_PmYbdC3RAv9KRGa61MPNYH8RwbHUfwSZyKolourQlnrEiwSdZVIiIRl4dQERe7hia-CooHj8=w600"
 },
 {
     "name" : "Otherdeed",
     "price"	: "2.12",
     "contractAddress" : "0x34d85c9cdeb23fa97cb08333b511ac86e1c4e258",
-    "tokenImage": "https://img-ae.seadn.io/https%3A%2F%2Flh3.googleusercontent.com%2FyIm-M5-BpSDdTEIJRt5D6xphizhIdozXjqSITgK4phWq7MmAU3qE7Nw7POGCiPGyhtJ3ZFP8iJ29TFl-RLcGBWX5qI4-ZcnCPcsY4zI%3Ds10000?fit=max&h=120&w=120&auto=format&s=0fa52b2d635edc28ef61b2b3e3b99a59"
+    "tokenImage": "https://img.seadn.io/files/3a57cdfd9193c6f4c5a48e28e6226daf.jpg?fit=max&auto=format"
 },
 {
     "name" : "Azuki",
     "price"	: "9.00",
     "contractAddress" : "0xed5af388653567af2f388e6224dc7c4b3241c544",
-    "tokenImage": "https://img-ae.seadn.io/https%3A%2F%2Flh3.googleusercontent.com%2FH8jOCJuQokNqGBpkBN5wk1oZwO7LM8bNnrHCaekV2nKjnCqw6UB5oaH8XyNeBDj6bA_n1mjejzhFQUP3O1NfjFLHr3FOaeHcTOOT%3Ds10000?fit=max&h=120&w=120&auto=format&s=7d8fc062f8834bfbce4aec4ff328f996"
+    "tokenImage": "https://img.seadn.io/files/5e243b11add7ae6e04f4b210220bdd13.png?fit=max&auto=format&w=600"
 },
 {
     "name" : "CloneX",
     "price"	: "8.55",
     "contractAddress" : "0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b",
-    "tokenImage": "https://img-ae.seadn.io/https%3A%2F%2Flh3.googleusercontent.com%2FXN0XuD8Uh3jyRWNtPTFeXJg_ht8m5ofDx6aHklOiy4amhFuWUa0JaR6It49AH8tlnYS386Q0TW_-Lmedn0UET_ko1a3CbJGeu5iHMg%3Ds10000?fit=max&h=120&w=120&auto=format&s=8319b6661311648a1193925c079fb6ef"
+    "tokenImage": "https://img.seadn.io/files/b4bc68d18cfbedd6d56766f4fdbe104f.png?fit=max&auto=format&w=600"
 },
 {
     "name" : "VeeFriends",
     "price"	: "6.29",
     "contractAddress": "0xa3aee8bce55beea1951ef834b99f3ac60d1abeeb",
-    "tokenImage": "https://lh3.googleusercontent.com/5y-UCAXiNOFXH551w5bWdZEYOCdHPwbqmcKb-xa3uVQEjQgxvih3HtZWSmzqDqd0uk7kIqFrZhw32Gt6xPBFg4t_n9BKhpou-dwnOg=s168"
+    "tokenImage": "https://lh3.googleusercontent.com/pbJBOL1jwR4InhT9Ut7oYV6Fo7wfNZLSDHLooL_VCvFI50Ra5cgG6t8ydysFOaCuadODjaR7xnanLCOsF-ox4dho0gSr37IlDG2Rlw=s0"
 },
 {
     "name" : "Moonbirds",
     "price"	: "18.50",
     "contractAddress" : "0x23581767a106ae21c074b2276d25e5c3e136a68b",
-    "tokenImage": "https://img-ae.seadn.io/https%3A%2F%2Flh3.googleusercontent.com%2FH-eyNE1MwL5ohL-tCfn_Xa1Sl9M9B4612tLYeUlQubzt4ewhr4huJIR5OLuyO3Z5PpJFSwdm7rq-TikAh7f5eUw338A2cy6HRH75%3Ds10000?fit=max&h=120&w=120&auto=format&s=30f910b04fda1685d06e40aebce47db8"
+    "tokenImage": "https://img.seadn.io/files/e39379c3ce441a0ec02701cc65f8ecb7.png?fit=max&auto=format&w=600"
 },
 {
     "name" : "Meebits",
     "price"	: "3.45",
     "contractAddress" : "0x7bd29408f11d2bfc23c34f18275bbf23bb716bc7",
-    "tokenImage": "https://img-ae.seadn.io/https%3A%2F%2Flh3.googleusercontent.com%2Fd784iHHbqQFVH1XYD6HoT4u3y_Fsu_9FZUltWjnOzoYv7qqB5dLUqpGyHBd8Gq3h4mykK5Enj8pxqOUorgD2PfIWcVj9ugvu8l0%3Ds10000?fit=max&h=120&w=120&auto=format&s=bae231b6301817a38ace71bc2b64b81e"
+    "tokenImage": "https://img.seadn.io/files/8dba504a3cde5e6930cd52be7c7df1d2.jpg?fit=max&auto=format&w=600"
 },
 {
     "name" : "Doodles",
     "price"	: "9.90",
     "contractAddress" : "0x8a90cab2b38dba80c64b7734e58ee1db38b8992e",
-    "tokenImage": "https://img-ae.seadn.io/https%3A%2F%2Flh3.googleusercontent.com%2F7B0qai02OdHA8P_EOVK672qUliyjQdQDGNrACxs7WnTgZAkJa_wWURnIFKeOh5VTf8cfTqW3wQpozGedaC9mteKphEOtztls02RlWQ%3Ds10000?fit=max&h=120&w=120&auto=format&s=65b159799dcff448deaf9106b1ead13e"
+    "tokenImage": "https://img.seadn.io/files/381c4d37a275341e2da8a8f759c6a9e5.png?fit=max&auto=format&w=600"
 },
 {
     "name" : "Cool Cats",
     "price"	: "3.29",
     "contractAddress" : "0x1a92f7381b9f03921564a437210bb9396471050c",
-    "tokenImage": "https://img-ae.seadn.io/https%3A%2F%2Flh3.googleusercontent.com%2FLIov33kogXOK4XZd2ESj29sqm_Hww5JSdO7AFn5wjt8xgnJJ0UpNV9yITqxra3s_LMEW1AnnrgOVB_hDpjJRA1uF4skI5Sdi_9rULi8%3Ds10000?fit=max&h=120&w=120&auto=format&s=2c14b63bf3c552b0a0d2e1caf6367e08"
+    "tokenImage": "https://img.seadn.io/files/49edff50b3bdfadacc74b102fbf4ba22.png?fit=max&auto=format&w=600"
 },
 {
     "name" : "Bored Ape Kennel Club",
     "price"	: "5.60",
     "contractAddress" : "0xba30e5f9bb24caa003e9f2f0497ad287fdf95623",
-    "tokenImage": "https://img-ae.seadn.io/https%3A%2F%2Flh3.googleusercontent.com%2Fl1wZXP2hHFUQ3turU5VQ9PpgVVasyQ79-ChvCgjoU5xKkBA50OGoJqKZeMOR-qLrzqwIfd1HpYmiv23JWm0EZ14owiPYaufqzmj1%3Ds10000?fit=max&h=120&w=120&auto=format&s=9d6e3b7dec9c72aaabf83a13e698cc4a"
+    "tokenImage": "https://img.seadn.io/files/8b0ba86bf1c71bd1e0793dba5f76ded2.png?fit=max&auto=format&w=600"
 },
 {
     "name" : "Loot",
     "price"	: "0.76",
     "contractAddress" : "0x7b3d36eb606f873a75a6ab68f8c999848b04f935",
-    "tokenImage": "https://lh3.googleusercontent.com/g-NFUWjS4IGgym8PHBxyhg5-G_B4x-IHgPKRkxo00JQFE3LOd-95yU2uhrokITVmV7KHEav6OMfAhfJ4roC5hwP-0tI9dMRd9wQLdw=s168"
+    "tokenImage": "https://openseauserdata.com/files/4f77e83591f84841d325db3c5b8d65f8.svg"
 },
 {
     "name" : "World Of Women",
     "price"	: "3.12",
     "contractAddress" : "0xe785e82358879f061bc3dcac6f0444462d4b5330",
-    "tokenImage": "https://img-ae.seadn.io/https%3A%2F%2Flh3.googleusercontent.com%2FEFAQpIktMBU5SU0TqSdPWZ4byHr3hFirL_mATsR8KWhM5z-GJljX8E73V933lkyKgv2SAFlfRRjGsWvWbQQmJAwu3F2FDXVa1C9F%3Ds10000?fit=max&h=120&w=120&auto=format&s=9c69a63a4c795e42d84e0a70f026847b"
+    "tokenImage": "https://img.seadn.io/files/6e7a60af7b0c204b06110d82501c81d8.png?fit=max&auto=format&w=600"
 },
 {
     "name" : "Cryptoadz",
     "price"	: "1.68",
     "contractAddress": "0x1cb1a5e65610aeff2551a50f76a87a7d3fb649c6",
-    "tokenImage": "https://img-ae.seadn.io/https%3A%2F%2Flh3.googleusercontent.com%2FiofetZEyiEIGcNyJKpbOafb_efJyeo7QOYnTog8qcQJhqoBU-Vu9l3lXidZhXOAdu6dj4fzWW6BZDU5vLseC-K03rMMu-_j2LvwcbHo%3Ds10000?fit=max&h=120&w=120&auto=format&s=ff2900e7a1682f22ab0e57992b0223bf"
-},
-{
-    "name" : "Lazy Lions",
-    "price"	: "1.68",
-    "contractAddress": "0x8943c7bac1914c9a7aba750bf2b6b09fd21037e0",
-    "tokenImage": "https://lh3.googleusercontent.com/kFZpw-bkoyH03qFbfqkwkkhHVxT7qclK_tYFmhU1K2HegU3v2wSMmhL6TIgw7Stx1KIoKs1sdJQ4My71ktXV7GygPBjaQZCACERt=s0"
+    "tokenImage": "https://img.seadn.io/files/212e6b032787fc333aae9d9cb784c003.png?fit=max&auto=format&w=600"
 },
 {
     "name" : "Lazy Lions",
     "price"	: "0.58",
     "contractAddress": "0x8943c7bac1914c9a7aba750bf2b6b09fd21037e0",
-    "tokenImage": "https://lh3.googleusercontent.com/kFZpw-bkoyH03qFbfqkwkkhHVxT7qclK_tYFmhU1K2HegU3v2wSMmhL6TIgw7Stx1KIoKs1sdJQ4My71ktXV7GygPBjaQZCACERt=s0"
+    "tokenImage": "https://lh3.googleusercontent.com/e0lSSv8jXAhtnAygGpO2mXeTJDpKAWTDtaiYNYcXEOAx8n4QqFeoNEIB5KkfH-11xxQUVL7qFXmqsV2NzSMMHvyZ9rgr6eCS6tuJ=w600"
 },
 {
     "name" : "Ethereum Name Service",

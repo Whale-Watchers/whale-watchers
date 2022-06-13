@@ -13,3 +13,12 @@
   margin: 10px 0px;
   border-bottom: #CCCCCC solid .5px;
 }
+
+.transactions_row {
+  display: flex;
+  border-bottom: 1px dotted lightgray;
+}
+
+.transactions_row > p {
+  flex: 1;
+}
