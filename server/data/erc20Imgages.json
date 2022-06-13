@@ -1,0 +1,147 @@
+[
+  {
+    "contractAddress": "",
+    "tokenSymbol": "ETH",
+    "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png"
+  },
+  {
+    "contractAddress": "0x6b175474e89094c44da98b954eedeac495271d0f",
+    "tokenSymbol": "DAI",
+    "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/4943.png"
+  },
+  {
+    "contractAddress": "0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce",
+    "tokenSymbol": "SHIB",
+    "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/5994.png"
+  },
+  {
+    "contractAddress": "0x3845badAde8e6dFF049820680d1F14bD3903a5d0",
+    "tokenSymbol": "SAND",
+    "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/6210.png"
+  },
+  {
+    "contractAddress": "0xf629cbd94d3791c9250152bd8dfbdf380e2a3b9c",
+    "tokenSymbol": "ENJ",
+    "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/2130.png"
+  },
+  {
+    "contractAddress": "0x3a4f40631a4f906c2BaD353Ed06De7A5D3fCb430",
+    "tokenSymbol": "PLA",
+    "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/7461.png"
+  },
+  {
+    "contractAddress": "0x3a4f40631a4f906c2BaD353Ed06De7A5D3fCb430",
+    "tokenSymbol": "PLA",
+    "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/7461.png"
+  },
+  {
+    "contractAddress": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+    "tokenSymbol": "USDT",
+    "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/825.png"
+  },
+  {
+    "contractAddress": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+    "tokenSymbol": "USDC",
+    "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png"
+  },
+  {
+    "contractAddress": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+    "tokenSymbol": "WBTC",
+    "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/3717.png"
+  },
+  {
+    "contractAddress": "0x50d1c9771902476076ecfc8b2a83ad6b9355a4c9",
+    "tokenSymbol": "FTT",
+    "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/4195.png"
+  },
+  {
+    "contractAddress": "0xa0b73e1ff0b80914ab6fe0444e65848c4c34450b",
+    "tokenSymbol": "CRO",
+    "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/3635.png"
+  },
+  {
+    "contractAddress": "0x514910771af9ca656af840dff83e8264ecf986ca",
+    "tokenSymbol": "LINK",
+    "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/1975.png"
+  },
+  {
+    "contractAddress": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+    "tokenSymbol": "UNI",
+    "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/7083.png"
+  },
+  {
+    "contractAddress": "0x5c147e74D63B1D31AA3Fd78Eb229B65161983B2b",
+    "tokenSymbol": "FLOW",
+    "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/4558.png"
+  },
+  {
+    "contractAddress": "0x0f5d2fb29fb7d3cfee444a200298f468908cc942",
+    "tokenSymbol": "MANA",
+    "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/1966.png"
+  },
+  {
+    "contractAddress": "0xdb0acc14396d108b3c5574483acb817855c9dc8d",
+    "tokenSymbol": "EMB",
+    "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/9626.png"
+  },
+  {
+    "contractAddress": "0xdb0acc14396d108b3c5574483acb817855c9dc8d",
+    "tokenSymbol": "EMB",
+    "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/9626.png"
+  },
+  {
+    "contractAddress": "0x61107a409fffe1965126aa456af679719695c69c",
+    "tokenSymbol": "UMI",
+    "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/12737.png"
+  },
+  {
+    "contractAddress": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+    "tokenSymbol": "ENS",
+    "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/13855.png"
+  },
+  {
+    "contractAddress": "0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0",
+    "tokenSymbol": "MATIC",
+    "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png"
+  },
+  {
+    "contractAddress": "0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0",
+    "tokenSymbol": "MATIC",
+    "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png"
+  },
+  {
+    "contractAddress": "0x4d224452801aced8b2f0aebe155379bb5d594381",
+    "tokenSymbol": "APE",
+    "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/18876.png"
+  },
+  {
+    "contractAddress": "0x4d224452801aced8b2f0aebe155379bb5d594381",
+    "tokenSymbol": "APE",
+    "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/18876.png"
+  },
+  {
+    "contractAddress": "0x407a3e019c655b779ccd098ff50377e4c5f1c334",
+    "tokenSymbol": "OTHR",
+    "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/20454.png"
+  },
+  {
+    "contractAddress": "0xa2cd3d43c775978a96bdbf12d733d5a1ed94fb18",
+    "tokenSymbol": "XCN",
+    "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/18679.png"
+  },
+  {
+    "contractAddress": "0xbbbbca6a901c926f240b89eacb641d8aec7aeafd",
+    "tokenSymbol": "LRC",
+    "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/1934.png"
+  },
+  {
+    "contractAddress": "0xc944e90c64b2c07662a292be6244bdf05cda44a7",
+    "tokenSymbol": "GRT",
+    "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/6719.png"
+  },
+  {
+    "contractAddress": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+    "tokenSymbol": "AAVE",
+    "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/7278.png"
+  }
+]

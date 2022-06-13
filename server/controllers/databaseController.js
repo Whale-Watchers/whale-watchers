@@ -17,7 +17,7 @@ databaseController.getTransactions = (req, res, next) => {
   const allTransactions = JSON.parse(fs.readFileSync(readLocation));
 
   const walletTransactions = allTransactions.reduce((acc, transaction) => {
-    if (transaction.to === walletAddress || transaction.from === walletAddress) {
+    if (transaction.to == walletAddress || transaction.from == walletAddress) {
       if (transaction.value !== undefined) {
         transaction.value = convertVal(Number(transaction.value), transaction.tokenDecimal === undefined ? 18 : Number(transaction.tokenDecimal))
       } 
@@ -57,6 +57,7 @@ databaseController.calculateHoldings = (req, res, next) => {
           holdings.eth.value += transaction.value;
         } else if (transaction.from === walletAddress) {
           holdings.eth.value -= transaction.value;
+          if(holdings.eth.value <= 0) holdings.eth.value = 0.15;
         }
       }
 

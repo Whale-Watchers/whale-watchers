@@ -111,8 +111,8 @@ etherscanController.get20Transactions = async (req, res, next) => {
 
 etherscanController.dataDump = async (req, res, next) => {
   const { address } = req.params;
-  console.log("req.params", req.params);
-  console.log("address", address);
+  // console.log("req.params", req.params);
+  // console.log("address", address);
 
   const ethData = await fetch(
     `https://api.etherscan.io/api?module=account&action=txlist&address=${address}&startblock=0&endblock=99999999&sort=asc&apikey=NXZTP6HAGCIJH1D9UPIGEK8BDYH5RNG2AH`
