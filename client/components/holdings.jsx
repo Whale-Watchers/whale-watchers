@@ -8,8 +8,8 @@ import NFTCard from './NftCard';
 
 const Holdings = () => {
     let walletAddress = useParams();
-    let [ loading, setLoading ] = useState(true);
-    let [ nftComponents, setComponents ] = useState([]);
+    let [loading, setLoading] = useState(true);
+    let [nftComponents, setComponents] = useState([]);
 
     const whaleData = {
         eth: [],
@@ -29,13 +29,13 @@ const Holdings = () => {
             const { tokenName, tokenSymbol, value, tokenDecimal, tokenImage } = whaleData.erc721[address];
             nftCardComponents.push(
                 <NFTCard
-                key={address} 
-                address={address}
-                tokenName={tokenName}
-                tokenSymbol={tokenSymbol}
-                value={value}
-                tokenDecimal={tokenDecimal}
-                tokenImage={tokenImage}
+                    key={address}
+                    address={address}
+                    tokenName={tokenName}
+                    tokenSymbol={tokenSymbol}
+                    value={value}
+                    tokenDecimal={tokenDecimal}
+                    tokenImage={tokenImage}
                 />
             )
         }
@@ -48,18 +48,20 @@ const Holdings = () => {
     if (loading) {
         return (
             <div id='isLoadingWrapper'>
-              <Box sx={{ width: '60%' }}>
-                <LinearProgress />
-              </Box>
+                <Box sx={{ width: '60%' }}>
+                    <LinearProgress />
+                </Box>
             </div>
-          )
+        )
     }
 
     return (
         <div id="holdingsContainer">
             <h3>Holdings</h3>
             <div className="erc721">
-                {nftComponents}
+                <div className='nftContainer'>
+                    {nftComponents}
+                </div>
             </div>
             <div className="erc70"></div>
             <div className="eth"></div>
