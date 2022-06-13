@@ -1,0 +1,247 @@
+[
+    {
+        "name": "Jay-Z",
+        "wallet": "0x3b417faee9d2ff636701100891dc2755b5321cc3",
+        "image": "~/client/docs/whales/jayz.png",
+        "worth": "$124,189.88",
+        "worth_num": 124189.88
+    },
+    {
+        "name": "Mike Tyson",
+        "wallet": "0x7217bc604476859303a27f111b187526231a300c",
+        "image": "~/client/docs/whales/miketyson.png",
+        "worth": "$16,102.69",
+        "worth_num": 16102.69
+    },
+    {
+        "name": "3lau",
+        "wallet": "0xd2aff66959ee0e6f92ee02d741071ddb5084bebb",
+        "image": "~/client/docs/whales/3LAU.png",
+        "worth": "$52,837.07",
+        "worth_num": 52837.07
+    },
+    {
+        "name": "Stephen Curry",
+        "wallet": "0x3becf83939f34311b6bee143197872d877501b11",
+        "image": "~/client/docs/whales/stephencurry.png",
+        "worth": "$322,032.97",
+        "worth_num": 322032.97
+    },
+    {
+        "name": "Steve Aoki",
+        "wallet": "0xe4bbcbff51e61d0d95fcc5016609ac8354b177c4",
+        "image": "~/client/docs/whales/steveaoki.png",
+        "worth": "$7.02 Million",
+        "worth_num": 7020000
+    },
+    {
+        "name": "LaMello Ball",
+        "wallet": "0xc1064e3662b0718357e9050694a3bfeaabede8ab",
+        "image": "~/client/docs/whales/lamelloball.png",
+        "worth": "$508,557.43",
+        "worth_num": 508557.43
+    },
+    {
+        "name": "Lindsay Lohan",
+        "wallet": "0x3781d92e5449b5b689fee308ded44882085b6312",
+        "image": "~/client/docs/whales/lamelloball.png",
+        "worth": "$22,415.23",
+        "worth_num": 22415.23
+    },
+    {
+        "name": "Mark Cuban",
+        "wallet": "0xa679c6154b8d4619af9f83f0bf9a13a680e01ec",
+        "image": "~/client/docs/whales/markcuban.png",
+        "worth": "$788,995.29",
+        "worth_num": 788995.29
+    },
+    {
+        "name": "Beeple",
+        "wallet": "0xc6b0562605d35ee710138402b878ffe6f2e23807",
+        "image": "~/client/docs/whales/beeple.png",
+        "worth": "$688,307.81",
+        "worth_num": 688307.81
+    },
+    {
+        "name": "Snoop Dog",
+        "wallet": "0xce90a7949bb78892f159f428d0dc23a8e3584d75",
+        "image": "~/client/docs/whales/snoopdogg.png",
+        "worth": "$3.62 Million",
+        "worth_num": 3620000
+    },
+    {
+        "name": "Ja Rule",
+        "wallet": "0x8d3bc45d7b30013c37c141f6ce7c981b2613efaa",
+        "image": "~/client/docs/whales/jarule.png",
+        "worth": "$111,777.20",
+        "worth_num": 111777.2
+    },
+    {
+        "name": "Serena Williams",
+        "wallet": "0x0864224f3cc570ab909ebf619f7583ef4a50b826",
+        "image": "~/client/docs/whales/serenawilliams.png",
+        "worth": "$138,999.06",
+        "worth_num": 138999.06
+    },
+    {
+        "name": "Alexis Ohanian",
+        "wallet": "0x0ed1e02164a2a9fad7a9f9b5b9e71694c3fad7f2",
+        "image": "~/client/docs/whales/alexisohanian.png",
+        "worth": "$2.61 Million",
+        "worth_num": 2610000
+    },
+    {
+        "name": "Mike Shinoda",
+        "wallet": "0xb55eb9bd32d6ab75d7555192e7a3a7ca0bcd5738",
+        "image": "~/client/docs/whales/mikeshinoda.png",
+        "worth": "$184,353.75",
+        "worth_num": 184353.75
+    },
+    {
+        "name": "Shaquille O'Neal",
+        "wallet": "0x3c6aeff92b4b35c2e1b196b57d0f8ffb56884a17",
+        "image": "~/client/docs/whales/shaquilleoneal.png",
+        "worth": "$57,893.24",
+        "worth_num": 57893.24
+    },
+    {
+        "name": "Elijah Wood",
+        "wallet": "0xf6de94be96f80602d90bf29bd9e88a0e843b2eb9",
+        "image": "~/client/docs/whales/elijahwood.png",
+        "worth": "$138,030.13",
+        "worth_num": 13830.13
+    },
+    {
+        "name": "Seth Curry",
+        "wallet": "0x9114b66e4bd387eb832d1477e86ede0cf7f76115",
+        "image": "~/client/docs/whales/sethcurry.png",
+        "worth": "$8,972.58",
+        "worth_num": 8972.58
+    },
+    {
+        "name": "Joel Madden",
+        "wallet": "0x35cded880959f93c415723902f91f964367a4dcd",
+        "image": "~/client/docs/whales/joelmadden",
+        "worth": "$2,246,400",
+        "worth_num": 2246400
+    },
+    {
+        "name": "Reese Witherspoon",
+        "wallet": "0x7948aa99e095dbfc1971bc8d2d1173893146630e",
+        "image": "~/client/docs/whales/reesewitherspoon.png",
+        "worth": "$25,570.53",
+        "worth_num": 25570.53
+    },
+    {
+        "name": "Jordan Belfort",
+        "wallet": "0xdbf2445e5049c04cda797dae60ac885e7d79df9d",
+        "image": "~/client/docs/whales/jordanbelfort.png",
+        "worth": "$6,537.12",
+        "worth_num": 6537.12
+    },
+    {
+        "name": "DJ Marshmello",
+        "wallet": "0xa0eaf6b0df87132c9a28e450a43c1d906defb60b",
+        "image": "~/client/docs/whales/djmarshmello.png",
+        "worth": "$958,792.87",
+        "worth_num": 958792.87
+    },
+    {
+        "name": "Timbaland",
+        "wallet": "0x4b1bdae6b46c2ed904581d7e4bf2b71e5f3f7072",
+        "image": "~/client/docs/whales/timbaland.png",
+        "worth": "$382.72",
+        "worth_num": 382.72
+    },
+    {
+        "name": "Lil Baby",
+        "wallet": "0xc86b12d850fdbbf3260a7baae862f85857aadbba",
+        "image": "~/client/docs/whales/lilbaby.png",
+        "worth": "$295,117.93",
+        "worth_num": 295117.93
+    },
+    {
+        "name": "Jimmy Fallon",
+        "wallet": "0x0394451c1238cec1e825229e692aa9e428c107d8",
+        "image": "~/client/docs/whales/jimmyfallon.png",
+        "worth": "$319,079.04",
+        "worth_num": 319079.04
+    },
+    {
+        "name": "Post Malone",
+        "wallet": "0xbea020c3bd417f30de4d6bd05b0ed310ac586cc0",
+        "image": "~/client/docs/whales/postmalone.png",
+        "worth": "$631,170.62",
+        "worth_num": 631170.62
+    },
+    {
+        "name": "Logan Paul",
+        "wallet": "0xff0bd4aa3496739d5667adc10e2b843dfab5712b",
+        "image": "~/client/docs/whales/loganpaul.png",
+        "worth": "$850,185.4",
+        "worth_num": 850185.4
+    },
+    {
+        "name": "Gary Vee",
+        "wallet": "0xd6a984153acb6c9e2d788f08c2465a1358bb89a7",
+        "image": "~/client/docs/whales/garyvee.png",
+        "worth": "$2.07 Million",
+        "worth_num": 2070000
+    },
+    {
+        "name": "Paris Hilton",
+        "wallet": "0xb6aa5a1aa37a4195725cdf1576dc741d359b56bd",
+        "image": "~/client/docs/whales/parishilton.png",
+        "worth": "$2.07 Million",
+        "worth_num": 2070000
+    },
+    {
+        "name": "Paris Hilton",
+        "wallet": "0xb6aa5a1aa37a4195725cdf1576dc741d359b56bd",
+        "image": "~/client/docs/whales/parishilton.png",
+        "worth": "$558,775.68",
+        "worth_num": 558775.68
+    },
+    {
+        "name": "Neymar",
+        "wallet": "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d",
+        "image": "~/client/docs/whales/neymar.png",
+        "worth": null,
+        "worth_num": null
+    },
+    {
+        "name": "Kevin Hart",
+        "wallet": "0xbbdac7ba85af15420afd1f4aa3313c3535b15cde",
+        "image": "~/client/docs/whales/kevinhart.png",
+        "worth": "$216,558.12",
+        "worth_num": 216558.12
+    },
+    {
+        "name": "Gwyneth Paltrow",
+        "wallet": "0x31185f782a7c11044566d70dfcf1c8175486f451",
+        "image": "~/client/docs/whales/gwynethpaltrow.png",
+        "worth": "$224,307.46",
+        "worth_num": 224307.46
+    },
+    {
+        "name": "Eva Longoria",
+        "wallet": "0xaa1b056286a66a9e6752c26776ac034c662a51d5",
+        "image": "~/client/docs/whales/evalongoria.png",
+        "worth": "$32,071.52",
+        "worth_num": 32071.52
+    },
+    {
+        "name": "Dillon Francis",
+        "wallet": "0x58473e9ac681c4424ca74619281ff71801d002d6",
+        "image": "~/client/docs/whales/dillonfrancis.png",
+        "worth": "$478,494.85",
+        "worth_num": 478494.85
+    },
+    {
+        "name": "Madonna",
+        "wallet": "0x58473e9ac681c4424ca74619281ff71801d002d6",
+        "image": "~/client/docs/whales/madonna.png",
+        "worth": "$1,763.77",
+        "worth_num": 1763.77
+    }
+]
