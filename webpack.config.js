@@ -13,7 +13,7 @@ module.exports = {
   /** "entry"
    * the entry point 
    */
-  entry: "./client/index.js",
+  entry: "./client/index.jsx",
   plugins: [
     new HtmlWebpackPlugin({ template: 'index.html' }),
   ],
