@@ -1,8 +1,8 @@
 const fetch = (...args) =>
   import("node-fetch").then(({ default: fetch }) => fetch(...args));
 const fs = require("fs");
-const mkdirp = require("mkdirp");
 const path = require("path");
+
 const etherscanController = {};
 
 etherscanController.get721Transactions = async (req, res, next) => {
@@ -21,7 +21,7 @@ etherscanController.get721Transactions = async (req, res, next) => {
   // console.log('erc721Body', erc721Body);
 
   if (erc721Data.status !== 200) {
-    next({ message: erc721Body.message });
+    return next({ message: erc721Body.message });
   }
 
   if (erc721Body.result.length !== 0)
@@ -60,7 +60,7 @@ etherscanController.get721Transactions = async (req, res, next) => {
     all721Transactions: all721Transactions.transactions,
   };
 
-  next();
+  return next();
 };
 
 etherscanController.get20Transactions = async (req, res, next) => {
@@ -76,8 +76,6 @@ etherscanController.get20Transactions = async (req, res, next) => {
     address: address,
     transactions: {},
   };
-
-  // TO DO: Call function that converts transaction.value to normalized value
 
   erc20Body.result.forEach((transaction) => {
     all20Transactions.transactions[transaction.timeStamp] = {
@@ -108,10 +106,62 @@ etherscanController.get20Transactions = async (req, res, next) => {
     all20Transactions: all20Transactions.transactions,
   };
 
-  next();
+  return next();
 };
 
 etherscanController.dataDump = async (req, res, next) => {
+  const { address } = req.params;
+  console.log("req.params", req.params);
+  console.log("address", address);
+
+  const ethData = await fetch(
+    `https://api.etherscan.io/api?module=account&action=txlist&address=${address}&startblock=0&endblock=99999999&sort=asc&apikey=NXZTP6HAGCIJH1D9UPIGEK8BDYH5RNG2AH`
+  );
+  const ethBody = await ethData.json();
+
+  const erc20Data = await fetch(
+    `https://api.etherscan.io/api?module=account&action=tokentx&address=${address}&startblock=0&endblock=99999999&sort=asc&apikey=NXZTP6HAGCIJH1D9UPIGEK8BDYH5RNG2AH`
+  );
+  const erc20Body = await erc20Data.json();
+
+  const erc721Data = await fetch(
+    `https://api.etherscan.io/api?module=account&action=tokennfttx&address=${address}&startblock=0&endblock=99999999&sort=asc&apikey=NXZTP6HAGCIJH1D9UPIGEK8BDYH5RNG2AH`
+  );
+  const erc721Body = await erc721Data.json();
+
+  if (ethData.status !== 200) {
+    next({
+      message: `error processing ethData for ${address}: ERROR: ${ethData.message}`,
+    });
+  } else if (erc20Data.status !== 200) {
+    next({
+      message: `error processing erc20Data for ${address}: ERROR: ${erc20Data.message}`,
+    });
+  } else if (erc721Data.status !== 200) {
+    next({
+      message: `error processing erc721data for ${address}: ERROR: ${erc721Data.message}`,
+    });
+  }
+  const output = [];
+
+  for (let tx of ethBody.result) {
+    output.push(tx);
+  }
+  for (let tx of erc20Body.result) {
+    output.push(tx);
+  }
+  for (let tx of erc721Body.result) {
+    output.push(tx);
+  }
+
+  const writeLocation = path.resolve(__dirname, `../data/testDump.json`);
+  fs.appendFileSync(writeLocation, JSON.stringify(output, null, 2));
+
+  return next();
+};
+
+module.exports = etherscanController;
+
   // const whaleAddresses = {
   //   "0x3b417faee9d2ff636701100891dc2755b5321cc3": "Jay-Z",
   //   "0x7217bc604476859303a27f111b187526231a300c": "Mike Tyson",
@@ -140,7 +190,6 @@ etherscanController.dataDump = async (req, res, next) => {
   //   "0xbea020c3bd417f30de4d6bd05b0ed310ac586cc0": "Post Malone",
   //   "0xff0bd4aa3496739d5667adc10e2b843dfab5712b": "LOgan Paul",
   //   "0xd6a984153acb6c9e2d788f08c2465a1358bb89a7": "Gary Vee",
-  //   "0x79f261f483b7cef4f995c1f8a0f46f88450423e3": "Eminenm",
   //   "0xb6aa5a1aa37a4195725cdf1576dc741d359b56bd": "Paris Hilton",
   //   "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d": "Neymar",
   //   "0xbbdac7ba85af15420afd1f4aa3313c3535b15cde": "Kevin Hart",
@@ -150,98 +199,6 @@ etherscanController.dataDump = async (req, res, next) => {
   //   "0x6ef962ea7e64e771d3a81bce4f95328d76d7672b": "Madonna",
   // };
 
-  const { address } = req.params;
-  console.log("req.params", req.params);
-  console.log("address", address);
-
-  // for (let address of Object.keys(whaleAddresses)) {
-  // console.log("address", address);
-  const ethData = await fetch(
-    `https://api.etherscan.io/api?module=account&action=txlist&address=${address}&startblock=0&endblock=99999999&sort=asc&apikey=NXZTP6HAGCIJH1D9UPIGEK8BDYH5RNG2AH`
-  );
-  const ethBody = await ethData.json();
-  const erc20Data = await fetch(
-    `https://api.etherscan.io/api?module=account&action=tokentx&address=${address}&startblock=0&endblock=99999999&sort=asc&apikey=NXZTP6HAGCIJH1D9UPIGEK8BDYH5RNG2AH`
-  );
-  const erc20Body = await erc20Data.json();
-  const erc721Data = await fetch(
-    `https://api.etherscan.io/api?module=account&action=tokennfttx&address=${address}&startblock=0&endblock=99999999&sort=asc&apikey=NXZTP6HAGCIJH1D9UPIGEK8BDYH5RNG2AH`
-  );
-  const erc721Body = await erc721Data.json();
-
-  if (ethData.status !== 200) {
-    next({
-      message: `error processing ethData for ${address}: ERROR: ${ethData.message}`,
-    });
-  } else if (erc20Data.status !== 200) {
-    next({
-      message: `error processing erc20Data for ${address}: ERROR: ${erc20Data.message}`,
-    });
-  } else if (erc721Data.status !== 200) {
-    next({
-      message: `error processing erc721data for ${address}: ERROR: ${erc721Data.message}`,
-    });
-    // }
-  }
-  const output = [];
-  // let i = 1;
-
-  for (let tx of ethBody.result) {
-    output.push(tx);
-    // output[`erc20-${i}`] = tx;
-    // i++;
-  }
-  for (let tx of erc20Body.result) {
-    output.push(tx);
-    // output[`erc20-${i}`] = tx;
-    // i++;
-  }
-  for (let tx of erc721Body.result) {
-    output.push(tx);
-    // output[`erc20-${i}`] = tx;
-    // i++;
-  }
-
-  // console.log("output", output);
-
-  const writeLocation = path.resolve(__dirname, `../data/testDump.json`);
-
-  fs.appendFileSync(writeLocation, JSON.stringify(output, null, 2));
-
-  // const writeFile = async (path, content) => {
-  //   await mkdirp(path);
-  //   fs.writeFileSync(path, content);
-  // };
-
-  // writeFile(newPath, JSON.stringify(output));
-
-  // fs.writeFileSync(
-  //   path.resolve(__dirname, `./data/${whaleAddresses[address]}dataDump.js`),
-  //   JSON.stringify(output),
-  //   { flag: "wx" },
-  //   function (err) {
-  //     if (err) throw err;
-  //     console.log("It's saved!");
-  //   }
-  // );
-
-  // fs.appendFileSync(
-  //   path.resolve(__dirname, `./data/${whaleAddresses[address]}dataDump.js`),
-  //   JSON.stringify(ethBody.result)
-  // );
-  // fs.appendFileSync(
-  //   path.resolve(__dirname, `./data/${whaleAddresses[address]}dataDump.js`),
-  //   JSON.stringify(erc20Body.result)
-  // );
-  // fs.appendFileSync(
-  //   path.resolve(__dirname, `./data/${whaleAddresses[address]}dataDump.js`),
-  //   JSON.stringify(erc721Body.result)
-  // );
-
-  next();
-};
-
-module.exports = etherscanController;
 
 // {
 //     "blockNumber": "12703694",

@@ -15,13 +15,18 @@ router.get(
   }
 );
 
-router.get("/dataDump/:address", etherscanController.dataDump, (req, res) => {
-  res.status(200).json({ worked: "worked" });
+// get all transactions (ETH, ERC20, ERC721) and dump them into /server/data folder
+
+router.get(
+  '/dataDump/:address',
+  etherscanController.dataDump,
+  (req, res) => {
+    res.status(200).json({ message: "data dump into /server/data folder" });
 });
 
+/*
 // get holdings at timestamp for address
 
-/*
 router.get(
     'getHoldings/:timeStamp/:address',
     etherscanController.getHoldings,
@@ -44,14 +49,5 @@ router.get(
 )
 */
 
-// router.get('/getTimes', etherscanController.getTimes, (req, res) => {
-//     res.status(200).json(res.locals.times);
-// })
-// router.get('/getValues', etherscanController.convertTransactions, (req, res) => {
-//     res.status(200).json(res.locals.values);
-// })
-// router.get('/grabData/:id', etherscanController.grabData, (req, res) => {
-//     res.status(200).json(res.locals.data);
-// })
 
 module.exports = router;
