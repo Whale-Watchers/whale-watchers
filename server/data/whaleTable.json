@@ -243,5 +243,13 @@
         "image": "~/client/docs/whales/madonna.png",
         "worth": "$1,763.77",
         "worth_num": 1763.77
+    },
+    {
+        "name": "Justin Bieber",
+        "wallet": "0xe21dc18513e3e68a52f9fcdacfd56948d43a11c6",
+        "image": "~/client/docs/whales/justinbieber.png",
+        "worth": "$614,746.99",
+        "worth_num": 614746.99
+        
     }
 ]

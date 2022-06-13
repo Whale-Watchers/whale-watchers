@@ -13,13 +13,13 @@ class MediaCard extends Component {
   }
 
   render() {
-    const { name, address, netWorth } = this.props;
+    const { name, address, netWorth, image } = this.props;
     return (
       <Card sx={{ maxWidth: 370 }}>
         <CardMedia
           component="img"
           height="140"
-          image={'https://www.tbstat.com/wp/uploads/2021/06/jay-z.png'}
+          image={image}
           alt="green iguana"
         />
         <CardContent>

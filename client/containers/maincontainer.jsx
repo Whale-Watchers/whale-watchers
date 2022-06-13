@@ -28,12 +28,12 @@ class MainContainer extends Component {
 
         <div id='appContainer'>
           <div id='toggleCompButtonsWrapper'>
-            <Button
+            {/* <Button
               id='graphButton'
               className='toggleButton'
               onClick={() => {
                 return navigate('/graph', this.state.componentData);
-              }}>Graph</Button>
+              }}>Graph</Button> */}
 
             <Button
               id='holdingsButton'

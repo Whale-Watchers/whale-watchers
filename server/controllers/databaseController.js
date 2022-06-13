@@ -38,6 +38,11 @@ databaseController.calculateHoldings = (req, res, next) => {
   const { walletAddress } = req.params;
   const walletTransactions = res.locals.walletTransactions;
 
+  const nftLocation = '../data/nftprices.json';
+  const relevantErc721 = JSON.parse(fs.readFileSync(path.resolve(__dirname, nftLocation)));
+  const erc20Location = '../data/erc20Images.json';
+  const relevantErc20 = JSON.parse(fs.readFileSync(path.resolve(__dirname, erc20Location)));
+
   const holdings = {
     eth: {
       contractAddress: "",
@@ -45,6 +50,7 @@ databaseController.calculateHoldings = (req, res, next) => {
       tokenSymbol: "ETH",
       value: 0,
       tokenDecimal: 18,
+      tokenImage: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png'
     },
     erc20: {},
     erc721: {},
@@ -107,7 +113,32 @@ databaseController.calculateHoldings = (req, res, next) => {
       }
     
   }
-  res.locals.holdings = holdings;
+
+  const relevantHoldings = {
+    eth: holdings.eth,
+    erc20: {},
+    erc721: {},
+  };
+
+  Object.keys(holdings.erc20).forEach(contractAddress => {
+    relevantErc20.forEach(token => {
+      if (contractAddress === token.contractAddress) {
+        relevantHoldings.erc20[contractAddress] = holdings.erc20[contractAddress];
+        relevantHoldings.erc20[contractAddress].tokenImage = token.tokenImage;
+      };
+    });
+  });
+
+  Object.keys(holdings.erc721).forEach(contractAddress => {
+    relevantErc721.forEach(nft => {
+      if (contractAddress === nft.contractAddress) {
+        relevantHoldings.erc721[contractAddress] = holdings.erc721[contractAddress];
+        relevantHoldings.erc721[contractAddress].tokenImage = nft.tokenImage;        
+      }
+    }) 
+  })
+
+  res.locals.holdings = relevantHoldings;
   return next();
 };
 
