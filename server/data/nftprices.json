@@ -1,0 +1,140 @@
+[
+  {
+    "name" : "CryptoPunks",
+    "price"	: "48.24",
+    "contractAddress": "0xb47e3cd837ddf8e4c57f05d70ab865de6e193bbb",
+    "tokenImage": "https://img.seadn.io/files/8f9108cbbae163f656406ef5826b47d4.png?fit=max&auto=format"
+  },
+  {
+    "name" : "Bored Ape Yacht Club",
+    "price"	: "83.00",
+    "contractAddress": "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d",
+    "tokenImage": "https://img.seadn.io/files/23849c1670acb9074d937496770589bf.png?fit=max&auto=format&w=600"
+  },
+  {
+    "name" : "Mutant Ape Yacht Club",
+    "price"	: "16.59",
+    "contractAddress" : "0x60e4d786628fea6478f785a6d7e704777c86a7c6",
+    "tokenImage": "https://img.seadn.io/files/09492206401c12851d15dca10e5d5012.png?fit=max&auto=format&w=600"
+},
+{
+    "name" : "Art Blocks",
+    "price"	: "73.00",
+    "contractAddress" : "0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270",
+    "tokenImage": "https://lh3.googleusercontent.com/jBYMYwLIpx6ZPsmAPto-UVMAdks2py_PmYbdC3RAv9KRGa61MPNYH8RwbHUfwSZyKolourQlnrEiwSdZVIiIRl4dQERe7hia-CooHj8=w600"
+},
+{
+    "name" : "Otherdeed",
+    "price"	: "2.12",
+    "contractAddress" : "0x34d85c9cdeb23fa97cb08333b511ac86e1c4e258",
+    "tokenImage": "https://img.seadn.io/files/3a57cdfd9193c6f4c5a48e28e6226daf.jpg?fit=max&auto=format"
+},
+{
+    "name" : "Azuki",
+    "price"	: "9.00",
+    "contractAddress" : "0xed5af388653567af2f388e6224dc7c4b3241c544",
+    "tokenImage": "https://img.seadn.io/files/5e243b11add7ae6e04f4b210220bdd13.png?fit=max&auto=format&w=600"
+},
+{
+    "name" : "CloneX",
+    "price"	: "8.55",
+    "contractAddress" : "0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b",
+    "tokenImage": "https://img.seadn.io/files/b4bc68d18cfbedd6d56766f4fdbe104f.png?fit=max&auto=format&w=600"
+},
+{
+    "name" : "VeeFriends",
+    "price"	: "6.29",
+    "contractAddress": "0xa3aee8bce55beea1951ef834b99f3ac60d1abeeb",
+    "tokenImage": "https://lh3.googleusercontent.com/pbJBOL1jwR4InhT9Ut7oYV6Fo7wfNZLSDHLooL_VCvFI50Ra5cgG6t8ydysFOaCuadODjaR7xnanLCOsF-ox4dho0gSr37IlDG2Rlw=s0"
+},
+{
+    "name" : "Moonbirds",
+    "price"	: "18.50",
+    "contractAddress" : "0x23581767a106ae21c074b2276d25e5c3e136a68b",
+    "tokenImage": "https://img.seadn.io/files/e39379c3ce441a0ec02701cc65f8ecb7.png?fit=max&auto=format&w=600"
+},
+{
+    "name" : "Meebits",
+    "price"	: "3.45",
+    "contractAddress" : "0x7bd29408f11d2bfc23c34f18275bbf23bb716bc7",
+    "tokenImage": "https://img.seadn.io/files/8dba504a3cde5e6930cd52be7c7df1d2.jpg?fit=max&auto=format&w=600"
+},
+{
+    "name" : "Doodles",
+    "price"	: "9.90",
+    "contractAddress" : "0x8a90cab2b38dba80c64b7734e58ee1db38b8992e",
+    "tokenImage": "https://img.seadn.io/files/381c4d37a275341e2da8a8f759c6a9e5.png?fit=max&auto=format&w=600"
+},
+{
+    "name" : "Cool Cats",
+    "price"	: "3.29",
+    "contractAddress" : "0x1a92f7381b9f03921564a437210bb9396471050c",
+    "tokenImage": "https://img.seadn.io/files/49edff50b3bdfadacc74b102fbf4ba22.png?fit=max&auto=format&w=600"
+},
+{
+    "name" : "Bored Ape Kennel Club",
+    "price"	: "5.60",
+    "contractAddress" : "0xba30e5f9bb24caa003e9f2f0497ad287fdf95623",
+    "tokenImage": "https://img.seadn.io/files/8b0ba86bf1c71bd1e0793dba5f76ded2.png?fit=max&auto=format&w=600"
+},
+{
+    "name" : "Loot",
+    "price"	: "0.76",
+    "contractAddress" : "0x7b3d36eb606f873a75a6ab68f8c999848b04f935",
+    "tokenImage": "https://openseauserdata.com/files/4f77e83591f84841d325db3c5b8d65f8.svg"
+},
+{
+    "name" : "World Of Women",
+    "price"	: "3.12",
+    "contractAddress" : "0xe785e82358879f061bc3dcac6f0444462d4b5330",
+    "tokenImage": "https://img.seadn.io/files/6e7a60af7b0c204b06110d82501c81d8.png?fit=max&auto=format&w=600"
+},
+{
+    "name" : "Cryptoadz",
+    "price"	: "1.68",
+    "contractAddress": "0x1cb1a5e65610aeff2551a50f76a87a7d3fb649c6",
+    "tokenImage": "https://img.seadn.io/files/212e6b032787fc333aae9d9cb784c003.png?fit=max&auto=format&w=600"
+},
+{
+    "name" : "Lazy Lions",
+    "price"	: "0.58",
+    "contractAddress": "0x8943c7bac1914c9a7aba750bf2b6b09fd21037e0",
+    "tokenImage": "https://lh3.googleusercontent.com/e0lSSv8jXAhtnAygGpO2mXeTJDpKAWTDtaiYNYcXEOAx8n4QqFeoNEIB5KkfH-11xxQUVL7qFXmqsV2NzSMMHvyZ9rgr6eCS6tuJ=w600"
+},
+{
+    "name" : "Ethereum Name Service",
+    "price"	: "0.18",
+    "contractAddress": "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
+    "tokenImage": "https://img-ae.seadn.io/https%3A%2F%2Flh3.googleusercontent.com%2F0cOqWoYA7xL9CkUjGlxsjreSYBdrUBE0c6EO1COG4XE8UeP-Z30ckqUNiL872zHQHQU5MUNMNhfDpyXIP17hRSC5HQ%3Ds10000?fit=max&h=120&w=120&auto=format&s=7291f2c48fb7a9c3452084c164734810"
+},
+{
+    "name" : "Invisible Friends",
+    "price"	: "2.3",
+    "contractAddress": "0x482050b6a609630e717d5e3223b07e2aab20d259",
+    "tokenImage": "https://lh3.googleusercontent.com/lW22aEwUE0IqGaYm5HRiMS8DwkDwsdjPpprEqYnBqo2s7gSR-JqcYOjU9LM6p32ujG_YAEd72aDyox-pdCVK10G-u1qZ3zAsn2r9=s0"
+},
+{
+    "name" : "Pudgy Penguins",
+    "price"	: "0.91",
+    "contractAddress": "0xbd3531da5cf5857e7cfaa92426877b022e612cf8",
+    "tokenImage": "https://lh3.googleusercontent.com/kTV4Q5Wl3goxnvmaOKElYCNjcGsVqwe1S9sKVPZIY9nxhmLbLTl4OtR3snHl5eNPOMt0pVfZDmEbqHk7gzbLFxn0d611s2SWVB-h6FE=s0"
+},
+{
+    "name" : "Degenz",
+    "price"	: "0.575",
+    "contractAddress": "0xfb9e9e7150ccebfe42d58de1989c5283d0eaab2e",
+    "tokenImage": "https://lh3.googleusercontent.com/zFBIowROnLr3wqkJW60E1ItzwHLTKTi8kCfBp86B2IN8VRRzWHwvOt9Kqx4ZmQis8cwLjByZdd6rv7SR7qQ1h_JH4HTIqp_kOezB5g=s0"
+},
+{
+    "name" : "Degenz",
+    "price"	: "0.575",
+    "contractAddress": "0xfb9e9e7150ccebfe42d58de1989c5283d0eaab2e",
+    "tokenImage": "https://lh3.googleusercontent.com/zFBIowROnLr3wqkJW60E1ItzwHLTKTi8kCfBp86B2IN8VRRzWHwvOt9Kqx4ZmQis8cwLjByZdd6rv7SR7qQ1h_JH4HTIqp_kOezB5g=s0"
+},
+{
+    "name" : "The Wicked Craniums",
+    "price"	: "0.09",
+    "contractAddress": "0x85f740958906b317de6ed79663012859067e745b",
+    "tokenImage": "https://lh3.googleusercontent.com/REgjUaWSyoNAVpGx8fy8qS2eHhfKk0cJlIAa2krmFOJJDouS9X9AyMKA-0xzJTrkrMCuACoQpNXVnJxCvzcBcUfQvk03qYyd8dwZ=w600"
+}
+]
