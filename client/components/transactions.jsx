@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Box from '@mui/material/Box';
+import LinearProgress from '@mui/material/LinearProgress';
 
 class Transactions extends Component {
     constructor(props) {
@@ -22,7 +24,7 @@ class Transactions extends Component {
     render() {
       //var nftSorted = [];
       console.log('state', this.state)
-      let sample = <p>hello</p>
+      let sample
       const nftprices = [
             {
               "name" : "CryptoPunks",
@@ -269,7 +271,13 @@ class Transactions extends Component {
             "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/7278.png"
           }
         ];
-
+        if (this.state.data === null) {
+        sample = <div id='isLoadingWrapper'>
+                    <Box sx={{ width: '60%' }}>
+                        <LinearProgress />
+                    </Box>
+                </div>
+        }
         if(this.state.data !== null){
           const jayZwalletAddress = '0x3b417faee9d2ff636701100891dc2755b5321cc3';
           const transactions = [];
