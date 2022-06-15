@@ -2,20 +2,22 @@ const fetch = (...args) =>
   import("node-fetch").then(({ default: fetch }) => fetch(...args));
 const fs = require("fs");
 const path = require("path");
+require('dotenv').config();
 
+const apiKey = process.env.API_KEY
 const etherscanController = {};
 
 etherscanController.get721Transactions = async (req, res, next) => {
   const { address } = req.params;
 
   const cryptoPunksData = await fetch(
-    `https://api.etherscan.io/api?module=account&action=tokentx&contractaddress=0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB&address=${address}&sort=asc&apikey=NXZTP6HAGCIJH1D9UPIGEK8BDYH5RNG2AH`
+    `https://api.etherscan.io/api?module=account&action=tokentx&contractaddress=0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB&address=${address}&sort=asc&apikey=${apiKey}`
   );
   const cryptoPunksBody = await cryptoPunksData.json();
   // console.log('cryptoPunksBody', cryptoPunksBody);
 
   const erc721Data = await fetch(
-    `https://api.etherscan.io/api?module=account&action=tokennfttx&address=${address}&startblock=0&endblock=99999999&sort=asc&apikey=NXZTP6HAGCIJH1D9UPIGEK8BDYH5RNG2AH`
+    `https://api.etherscan.io/api?module=account&action=tokennfttx&address=${address}&startblock=0&endblock=99999999&sort=asc&apikey=${apiKey}`
   );
   const erc721Body = await erc721Data.json();
   // console.log('erc721Body', erc721Body);
@@ -67,7 +69,7 @@ etherscanController.get20Transactions = async (req, res, next) => {
   const { address } = req.params;
 
   const erc20Data = await fetch(
-    `https://api.etherscan.io/api?module=account&action=tokentx&address=${address}&sort=asc&apikey=NXZTP6HAGCIJH1D9UPIGEK8BDYH5RNG2AH`
+    `https://api.etherscan.io/api?module=account&action=tokentx&address=${address}&sort=asc&apikey=${apiKey}`
   );
   const erc20Body = await erc20Data.json();
   // console.log(erc20Body);
@@ -115,17 +117,17 @@ etherscanController.dataDump = async (req, res, next) => {
   // console.log("address", address);
 
   const ethData = await fetch(
-    `https://api.etherscan.io/api?module=account&action=txlist&address=${address}&startblock=0&endblock=99999999&sort=asc&apikey=NXZTP6HAGCIJH1D9UPIGEK8BDYH5RNG2AH`
+    `https://api.etherscan.io/api?module=account&action=txlist&address=${address}&startblock=0&endblock=99999999&sort=asc&apikey=${apiKey}`
   );
   const ethBody = await ethData.json();
 
   const erc20Data = await fetch(
-    `https://api.etherscan.io/api?module=account&action=tokentx&address=${address}&startblock=0&endblock=99999999&sort=asc&apikey=NXZTP6HAGCIJH1D9UPIGEK8BDYH5RNG2AH`
+    `https://api.etherscan.io/api?module=account&action=tokentx&address=${address}&startblock=0&endblock=99999999&sort=asc&apikey=${apiKey}`
   );
   const erc20Body = await erc20Data.json();
 
   const erc721Data = await fetch(
-    `https://api.etherscan.io/api?module=account&action=tokennfttx&address=${address}&startblock=0&endblock=99999999&sort=asc&apikey=NXZTP6HAGCIJH1D9UPIGEK8BDYH5RNG2AH`
+    `https://api.etherscan.io/api?module=account&action=tokennfttx&address=${address}&startblock=0&endblock=99999999&sort=asc&apikey=${apiKey}`
   );
   const erc721Body = await erc721Data.json();
 
@@ -154,7 +156,7 @@ etherscanController.dataDump = async (req, res, next) => {
     output.push(tx);
   }
 
-  const writeLocation = path.resolve(__dirname, `../data/testDump.json`);
+  const writeLocation = path.resolve(__dirname, `../data/testDump2.json`);
   fs.appendFileSync(writeLocation, JSON.stringify(output, null, 2));
 
   return next();
@@ -163,7 +165,7 @@ etherscanController.dataDump = async (req, res, next) => {
 module.exports = etherscanController;
 
   // const whaleAddresses = {
-  //   "0x3b417faee9d2ff636701100891dc2755b5321cc3": "Jay-Z",
+  //   "0x3b417faee9d2ff636701100891dc2755b5321cc3": "Jay-Z",api
   //   "0x7217bc604476859303a27f111b187526231a300c": "Mike Tyson",
   //   "0xd2aff66959ee0e6f92ee02d741071ddb5084bebb": "Blau",
   //   "0x3becf83939f34311b6bee143197872d877501b11": "Stephen Curry",
