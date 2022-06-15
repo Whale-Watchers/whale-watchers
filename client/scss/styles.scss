@@ -54,3 +54,25 @@ body {
 //   background-color: blue !important;
 //   overflow: scroll;
 // }
+
+#whaleLogoHome {
+  // display:block;
+  // margin-right:auto;
+  // margin-left:auto;
+  height: 200px;
+}
+
+#brandingWrapperHome {
+  justify-content: center;
+  display: grid;
+}
+#whale {
+  justify-content: center;
+  display: grid;
+}
+
+#signInDiv {
+  display:flex;
+  justify-content: center;
+  padding-top: 10px;
+}
