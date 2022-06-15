@@ -271,6 +271,7 @@ class Transactions extends Component {
             "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/7278.png"
           }
         ];
+        //Loading bar if data has not loaded yet
         if (this.state.data === null) {
         sample = <div id='isLoadingWrapper'>
                     <Box sx={{ width: '60%' }}>
@@ -297,10 +298,10 @@ class Transactions extends Component {
               if(transaction.contractAddress === erc20.contractAdress) return result = transaction
             });
             if(result) return transactions.push(result);
-            //return result;
+            return result;
           });
 
-
+          //transactions = [a bunch of stuff]
           console.log('filtered transactions-->',this.state.data)
           sample = this.state.data.map(transactions => {
             const date = new Date(transactions.timeStamp * 1000).toLocaleDateString('en-US');

@@ -39,6 +39,41 @@ const Holdings = () => {
                 />
             )
         }
+        //------------------------------------------------------------------------------------------------------------
+        // for (let address in whaleData.erc20) {
+        //     const { tokenName, tokenSymbol, value, tokenDecimal, tokenImage } = whaleData.erc20[address];
+        //     if (tokenName && tokenSymbol && value && tokenDecimal && tokenImage) {
+        //     nftCardComponents.push(
+        //         <NFTCard
+        //             key={address}
+        //             address={address}
+        //             tokenName={tokenName}
+        //             tokenSymbol={tokenSymbol}
+        //             value={value}
+        //             tokenDecimal={tokenDecimal}
+        //             tokenImage={tokenImage}
+        //         />
+        //     )
+        //   }
+        // }
+        // for (let address in whaleData.eth) {
+        //     const { tokenName, tokenSymbol, value, tokenDecimal, tokenImage } = whaleData.eth[address];
+        //     if (tokenName && tokenSymbol && value && tokenDecimal && tokenImage) {
+        //     nftCardComponents.push(
+        //         <NFTCard
+        //             key={address}
+        //             address={address}
+        //             tokenName={tokenName}
+        //             tokenSymbol={tokenSymbol}
+        //             value={value}
+        //             tokenDecimal={tokenDecimal}
+        //             tokenImage={tokenImage}
+        //         />
+        //     )
+        //     }
+        // }
+        //--------------------------------------------------------------------------------------------------------------------------
+
         setLoading(false);
         setComponents(nftCardComponents);
     }).catch(err => {
