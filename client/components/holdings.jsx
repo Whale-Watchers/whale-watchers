@@ -3,7 +3,7 @@ import React, { Component, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import LinearProgress from '@mui/material/LinearProgress';
-import NFTCard from './NftCard';
+import NFTCard from './NFTCard';
 
 
 const Holdings = () => {
