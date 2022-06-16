@@ -16,7 +16,7 @@ import * as types from "../constants/actionTypes";
   whaleTable,
   ethPrice: '',
   whale: '',
-  nftComponents: '',
+  nftComponents: {},
   loading: true,
   dataTransactions: [],
   };
@@ -24,17 +24,25 @@ import * as types from "../constants/actionTypes";
   const nftReducer = (state = initialState, action) => {
     let whale;
     let ethPrice;
+    let nftComponents
+    let dataTransactions
 
     switch (action.type) {
       case types.SET_WHALE:
         console.log(`%c ${action.payload}`, 'background-color: green');
         whale = action.payload.currentWhale
-        console.log('set whale action activated');
+        nftComponents = action.payload.nftComponentsData
+        dataTransactions = action.payload.transactionData
+        console.log(`%c ${whale}`, 'background-color: pink');
+        console.log(`%c ${nftComponents}`, 'background-color: magenta');
+        console.log(`%c ${dataTransactions}`, 'background-color: blue');
 
-
+// transactionData, nftComponentsData, currentWhale
         return {
           ...state,
           whale,
+          nftComponents,
+          dataTransactions,
         }
 
 
