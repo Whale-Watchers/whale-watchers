@@ -111,8 +111,8 @@ export default function DropdownList(props) {
   const handleChange = (event) => {
     const walletAddress = event.target.value;
     //console.log('event ---->:', event);
-    setWhale(event.target.value);
-    //console.log('whale ---->:', walletAddress);
+    setWhale(walletAddress);
+    console.log('whale ---->:', walletAddress);
     navigate(`/holdings/${walletAddress}`);
   };
 const menuItems = whaleTable.map((element, index) => {

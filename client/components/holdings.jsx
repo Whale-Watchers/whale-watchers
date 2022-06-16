@@ -3,11 +3,11 @@ import React, { Component, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import LinearProgress from '@mui/material/LinearProgress';
-import NFTCard from './NftCard';
+import NFTCard from './NFTCard';
 
 
 const Holdings = () => {
-    let walletAddress = useParams();
+    let walletAddress = useParams(); 
     let [loading, setLoading] = useState(true);
     let [nftComponents, setComponents] = useState([]);
 
@@ -63,7 +63,7 @@ const Holdings = () => {
                     {nftComponents}
                 </div>
             </div>
-            <div className="erc70"></div>
+            <div className="erc20"></div>
             <div className="eth"></div>
         </div>
     )

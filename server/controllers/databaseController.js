@@ -2,6 +2,8 @@
 const { RequestHandler } = require("express");
 const fs = require("fs");
 const path = require("path");
+// const erc721ImageScraper = require('../scrapers/erc721ImageScraper');
+const looksRareController = require('./looksRareController');
 
 const databaseController = {};
 
@@ -16,6 +18,11 @@ databaseController.getTransactions = (req, res, next) => {
   const readLocation = path.resolve(__dirname, "../data/dataDump.json");
   const allTransactions = JSON.parse(fs.readFileSync(readLocation));
 
+  const nftLocation = '../data/nftprices.json';
+  const relevantErc721 = JSON.parse(fs.readFileSync(path.resolve(__dirname, nftLocation)));
+  const erc20Location = '../data/erc20Images.json';
+  const relevantErc20 = JSON.parse(fs.readFileSync(path.resolve(__dirname, erc20Location)));
+
   const walletTransactions = allTransactions.reduce((acc, transaction) => {
     if (transaction.to == walletAddress || transaction.from == walletAddress) {
       if (transaction.value !== undefined) {
@@ -24,24 +31,38 @@ databaseController.getTransactions = (req, res, next) => {
       acc.push(transaction);
     }
     return acc;
-    }, [])
+    }, []) 
+
+  const relevantWalletTransactions = [];
+
+  walletTransactions.forEach(transaction => {
+    relevantErc20.forEach(token => {
+      if (transaction.contractAddress === token.contractAddress) {
+        relevantWalletTransactions.push(transaction);
+      };
+    });
+
+    relevantErc721.forEach(nft => {
+      if (transaction.contractAddress === nft.contractAddress) {
+        relevantWalletTransactions.push(transaction);
+      };
+    });
+  });
 
   res.locals.allTransactions = allTransactions;
-  res.locals.walletTransactions = walletTransactions;
+  res.locals.walletTransactions = relevantWalletTransactions;
   return next();
 };
 
-
-
 /** @type {RequestHandler} */
-databaseController.calculateHoldings = (req, res, next) => {
+databaseController.calculateHoldings = async (req, res, next) => {
   const { walletAddress } = req.params;
   const walletTransactions = res.locals.walletTransactions;
 
-  const nftLocation = '../data/nftprices.json';
-  const relevantErc721 = JSON.parse(fs.readFileSync(path.resolve(__dirname, nftLocation)));
-  const erc20Location = '../data/erc20Images.json';
-  const relevantErc20 = JSON.parse(fs.readFileSync(path.resolve(__dirname, erc20Location)));
+  // const nftLocation = '../data/nftprices.json';
+  // const relevantErc721 = JSON.parse(fs.readFileSync(path.resolve(__dirname, nftLocation)));
+  // const erc20Location = '../data/erc20Images.json';
+  // const relevantErc20 = JSON.parse(fs.readFileSync(path.resolve(__dirname, erc20Location)));
 
   const holdings = {
     eth: {
@@ -80,7 +101,7 @@ databaseController.calculateHoldings = (req, res, next) => {
           } else {
             holdings.erc20[transaction.contractAddress].value += transaction.value;
           }
-        } else if (transaction.from === walletAddress) {
+        } else if (transaction.from === walletAddress && holdings.erc20[transaction.contractAddress]) {
           holdings.erc20[transaction.contractAddress].value -= transaction.value;
 
           if (holdings.erc20[transaction.contractAddress].value === 0) {
@@ -96,49 +117,70 @@ databaseController.calculateHoldings = (req, res, next) => {
             holdings.erc721[transaction.contractAddress] = {
               tokenName: transaction.tokenName,
               tokenSymbol: transaction.tokenSymbol,
-              tokenID: transaction.tokenID,
+              tokenIDs: [
+                { 
+                  tokenID: transaction.tokenID,
+                  tokenImage: await looksRareController.getTokenImage(transaction.contractAddress, transaction.tokenID)
+                }
+              ],
               value: 1,
               tokenDecimal: transaction.tokenDecimal,
             };
-          } else {
+          } 
+          else {
             holdings.erc721[transaction.contractAddress].value += 1;
+            holdings.erc721[transaction.contractAddress].tokenIDs.push(
+              { 
+                tokenID: transaction.tokenID,
+                tokenImage: await looksRareController.getTokenImage(transaction.contractAddress, transaction.tokenID)
+              }
+            );
           }
-        } else if (transaction.from === walletAddress) {
+        } 
+        else if (transaction.from === walletAddress && holdings.erc721[transaction.contractAddress]) {
           holdings.erc721[transaction.contractAddress].value -= 1;
+          const tokenIDsLeft = [];
+          holdings.erc721[transaction.contractAddress].tokenIDs.forEach(tokenID => {
+            if (tokenID.tokenID !== transaction.tokenID) {
+              tokenIDsLeft.push(tokenID);
+            }
+          })
+          holdings.erc721[transaction.contractAddress].tokenID = tokenIDsLeft;
 
           if (holdings.erc721[transaction.contractAddress].value === 0) {
             delete holdings.erc721[transaction.contractAddress];
           }
         }
       }
-    
   }
 
-  const relevantHoldings = {
-    eth: holdings.eth,
-    erc20: {},
-    erc721: {},
-  };
+  // const relevantHoldings = {
+  //   eth: holdings.eth,
+  //   erc20: {},
+  //   erc721: {},
+  // };
 
-  Object.keys(holdings.erc20).forEach(contractAddress => {
-    relevantErc20.forEach(token => {
-      if (contractAddress === token.contractAddress) {
-        relevantHoldings.erc20[contractAddress] = holdings.erc20[contractAddress];
-        relevantHoldings.erc20[contractAddress].tokenImage = token.tokenImage;
-      };
-    });
-  });
+  // Object.keys(holdings.erc20).forEach(contractAddress => {
+  //   relevantErc20.forEach(token => {
+  //     if (contractAddress === token.contractAddress) {
+  //       relevantHoldings.erc20[contractAddress] = holdings.erc20[contractAddress];
+  //       relevantHoldings.erc20[contractAddress].tokenImage = token.tokenImage;
+  //     };
+  //   });
+  // });
 
-  Object.keys(holdings.erc721).forEach(contractAddress => {
-    relevantErc721.forEach(nft => {
-      if (contractAddress === nft.contractAddress) {
-        relevantHoldings.erc721[contractAddress] = holdings.erc721[contractAddress];
-        relevantHoldings.erc721[contractAddress].tokenImage = nft.tokenImage;        
-      }
-    }) 
-  })
+  // Object.keys(holdings.erc721).forEach(contractAddress => {
+  //   relevantErc721.forEach(nft => {
+  //     if (contractAddress === nft.contractAddress) {
+  //       relevantHoldings.erc721[contractAddress] = holdings.erc721[contractAddress];
+  //       relevantHoldings.erc721[contractAddress].tokenImage = nft.tokenImage;        
+  //     }
+  //   }) 
+  // })
 
-  res.locals.holdings = relevantHoldings;
+  res.locals.holdings = holdings;
+
+
   return next();
 };
 
@@ -165,7 +207,7 @@ module.exports = databaseController;
       },
     ]
 
-    erc721: [
+    erc721: 
       {
         contractAddress: "0x74a69df3adc7235392374f728601e49807de4b30",
         tokenName: "Misfit University Official",
@@ -174,7 +216,7 @@ module.exports = databaseController;
         value: 0,
         tokenDecimal: 0, *****
       },
-    ]
+    
   }
   */
 /* 
@@ -245,7 +287,8 @@ ERC721 Transaction example
     "gasUsed": "62605",
     "cumulativeGasUsed": "11600403",
     "input": "deprecated",
-    "confirmations": "2241778"
+    "confirmations": "2241778",
+    "tokenImage": 'URL"
 },
 
 */

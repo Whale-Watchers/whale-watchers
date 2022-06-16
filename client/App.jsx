@@ -31,11 +31,11 @@ const App = () => {
           <Routes>
             <Route exact path='/transactions' element={<Transactions parsedState={statePlaceHolder} />}></Route>
             {/* <Route path='/holdings' element={<Holdings parsedState={statePlaceHolder} />}> */}
-            <Route path='holdings' >
+            <Route path='holdings' > // localhost:8080/holdings/'0x0000123123123'
               <Route exact path=':id' element={<Holdings parsedState={statePlaceHolder} />}></Route>
             </Route>
 
-            <Route exact path='/graph' element={<Graph parsedState={statePlaceHolder} />}></Route>
+            {/* <Route exact path='/graph' element={<Graph parsedState={statePlaceHolder} />}></Route> */}
             <Route exact path='/' element={<Home />}></Route>
           </Routes>
         </div>
