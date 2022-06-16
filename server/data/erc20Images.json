@@ -115,11 +115,6 @@
     "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/18876.png"
   },
   {
-    "contractAddress": "0x4d224452801aced8b2f0aebe155379bb5d594381",
-    "tokenSymbol": "APE",
-    "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/18876.png"
-  },
-  {
     "contractAddress": "0x407a3e019c655b779ccd098ff50377e4c5f1c334",
     "tokenSymbol": "OTHR",
     "tokenImage": "https://s2.coinmarketcap.com/static/img/coins/64x64/20454.png"
