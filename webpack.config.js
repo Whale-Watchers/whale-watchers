@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+//const json = require
 
 /*We are basically telling webpack to take index.js from entry. Then check for all file extensions in resolve. 
 After that apply all the rules in module.rules and produce the output and place it in main.js in the public folder.*/
@@ -13,7 +14,7 @@ module.exports = {
   /** "entry"
    * the entry point 
    */
-  entry: "./client/index.js",
+  entry: "./client/index.jsx",
   plugins: [
     new HtmlWebpackPlugin({ template: 'index.html' }),
   ],
@@ -57,8 +58,9 @@ module.exports = {
      * disable live reload on the browser. "hot" must be set to false for this to work
     */
     liveReload: true,
+    historyApiFallback: true, // fall back to entry path every time it loads for react router
     proxy: {
-      '/': 'http://localhost:3000'
+      '/': 'http://localhost:3000',
     },
   },
   resolve: {

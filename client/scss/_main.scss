@@ -1,0 +1,45 @@
+// main.scss
+
+#mainWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 50px;
+  background-color: white;
+  min-height: 70vh;
+  padding-top: 50px;
+  padding-left: 20px;
+}
+
+#componentWrapper {
+  margin-left: 40px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+#dropdownWrapper {
+  display: flex;
+  flex: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+#toggleCompButtonsWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 20%;
+}
+
+// Have to overwrite the MUI styling in the listed ways below
+.toggleButton {
+  margin: 10px 0px 10px 50px !important;
+  border: 2px #156C98 solid !important;
+  min-width: 150px !important;
+  max-width: 150px !important;
+  padding: 8px !important;
+  color: #156C98 !important;
+  font-weight: 500 !important;
+}
