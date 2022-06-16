@@ -4,15 +4,10 @@ import { Button } from '@mui/material';
 import { Navigate } from 'react-router-dom';
 import axios from 'axios';
 import { parse } from 'ipaddr.js';
+import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
-class MainContainer extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      componentData: ['testing for holding data']
-    }
-    // this.getComponentData = this.getComponentData.bind(data);
-  }
+function MainContainer () {
 
   // async getComponentData(endpoint, walletAddress) {
   //   const url = `http://localhost:3000/${endpoint}/${walletAddress}`;
@@ -21,8 +16,9 @@ class MainContainer extends Component {
   //   })
   // }
 
-  render() {
-    const { navigate } = this.props;
+  const navigate = useNavigate()
+  const whale = useSelector(state => state.nfts.whale)
+
     return (
       <div id='mainContainer'>
 
@@ -38,25 +34,19 @@ class MainContainer extends Component {
             <Button
               id='holdingsButton'
               className='toggleButton'
-              onClick={() => {
-                // this.parseComponentData(holdingsData); // invoking with the json file data
-                // this.getComponentData('/database/getHoldings', '')
-                return navigate('/holdings', this.state.componentData);
-              }}>Holdings</Button>
+              onClick={() => navigate(`/holdings/${whale}`)}>Holdings</Button>
 
             <Button
               id='transactionsButton'
               className='toggleButton'
-              onClick={() => {
-                // this.parseComponentData(transactionData); // invoking with the json file data
-                return navigate('/transactions', this.state.componentData);
-              }}>Transactions</Button>
+              onClick={() => navigate('/transactions')
+              }>Transactions</Button>
           </div>
 
         </div>
       </div>
     );
   }
-}
+
 
 export default MainContainer;

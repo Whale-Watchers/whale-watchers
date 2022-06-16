@@ -25,23 +25,23 @@ const App = () => {
       <div id='dropdownWrapper'>
         <DropdownList /* navigate={navigateToComp} */ />
       </div>
-      <div id='appContainer'>
-        <MainContainer /* navigate={navigateToComp} */ /> 
+      {/* <div id='appContainer'> */}
+        {/* <MainContainer /* navigate={navigateToComp} />*/}
         <div id='componentWrapper'>
           <Routes>
-            <Route exact path='/transactions' element={<Transactions /* parsedState={statePlaceHolder} */ />}></Route>
+            <Route exact path='/transactions' element={<Transactions />}></Route>
             {/* <Route path='/holdings' element={<Holdings parsedState={statePlaceHolder} />}> */}
-            <Route path='holdings' >
-              <Route exact path=':id' element={<Holdings /* parsedState={statePlaceHolder} */ />}></Route>
+            <Route path='/holdings' >
+              <Route exact path=':id' element={<Holdings />}></Route>
             </Route>
 
-            <Route exact path='/graph' element={<Graph /* parsedState={statePlaceHolder} */ />}></Route>
+            <Route exact path='/graph' element={<Graph />}></Route>
             <Route exact path='/' element={<Home />}></Route>
           </Routes>
         </div>
-      </div>
+     {/* </div> */}
 
-    </div>
+     </div>
   )
 };
 
