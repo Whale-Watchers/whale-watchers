@@ -1,23 +1,24 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
+import React, {useEffect} from 'react'
+import { connect, useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import logo from '../docs/logo/WW_1.jpg';
+import * as actions from "../actions/actions";
 
-class Nav extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      ethPrice: 0
-    }
-  }
+const url = 'https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD&api_key={215c83221e15d164882ccf35f709ef2266294181012119fd54c5c30436cfc9ff}';
 
-  async componentDidMount() {
-    const url = 'https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD&api_key={215c83221e15d164882ccf35f709ef2266294181012119fd54c5c30436cfc9ff}';
-    await axios.get(url).then(res => {
-      this.setState({ ethPrice: res.data.USD });
-    });
-  }
 
-  render() {
+const Nav = () => {
+  const price = useSelector(state => state.nfts.ethPrice)
+  const dispatch = useDispatch()
+
+  const getEthPrice = async () => {
+        let price;
+        const response = await axios.get(url)
+        dispatch(actions.setEtherActionCreator(response.data.USD))}
+  
+  useEffect(() => getEthPrice(), [])
+
     return (
       <div id="navContainer">
         <div id='brandingWrapper'>
@@ -30,11 +31,13 @@ class Nav extends Component {
             src={'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/1257px-Ethereum_logo_2014.svg.png'}
             id='ethLogo'
           />
-          <h3>ETH / USD: ${this.state.ethPrice}</h3>
+          <h3>ETH / USD: ${price}</h3>
         </div>
       </div>
     )
-  }
-}
+    } 
+  
+  
 
-export default Nav;
+// export default connect(mapStateToProps, mapDispatchToProps)(Nav);
+export default Nav

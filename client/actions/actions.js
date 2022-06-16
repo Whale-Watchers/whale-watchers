@@ -16,3 +16,8 @@ export const setWhaleActionCreator = (whaleAddress) => ({
     type: types.SET_WHALE,
     payload: whaleAddress,
   });
+
+  export const setEtherActionCreator = (price) => ({
+    type: types.GET_ETHER,
+    payload: price,
+  })

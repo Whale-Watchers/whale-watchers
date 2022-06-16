@@ -9,8 +9,19 @@ import styles from './scss/styles.scss';
 // TODO: Make sure you can use PROVIDER with react-router
 
 ReactDOM.render(
-  <Router>
-    <App />
-  </Router>,
+  <Provider store={store}>
+    <Router>
+      <App />
+    </Router>
+  </Provider>,
   document.getElementById('root')
 )
+
+/* render(
+  // wrap the App in the Provider Component and pass in the store
+
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById("contents")
+); */
