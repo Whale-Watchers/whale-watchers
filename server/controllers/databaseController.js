@@ -77,7 +77,7 @@ databaseController.calculateHoldings = async (req, res, next) => {
     erc721: {},
   };
 
-  for (let transaction of walletTransactions) {
+  for (const transaction of walletTransactions) {
       // ETH transactions
       if (transaction.contractAddress === "") {
         if (transaction.to === walletAddress) {
@@ -120,7 +120,7 @@ databaseController.calculateHoldings = async (req, res, next) => {
               tokenIDs: [
                 { 
                   tokenID: transaction.tokenID,
-                  tokenImage: await looksRareController.getTokenImage(transaction.contractAddress, transaction.tokenID)
+                  tokenImage: transaction.imageURI
                 }
               ],
               value: 1,
@@ -132,7 +132,7 @@ databaseController.calculateHoldings = async (req, res, next) => {
             holdings.erc721[transaction.contractAddress].tokenIDs.push(
               { 
                 tokenID: transaction.tokenID,
-                tokenImage: await looksRareController.getTokenImage(transaction.contractAddress, transaction.tokenID)
+                tokenImage: transaction.imageURI
               }
             );
           }
@@ -145,7 +145,7 @@ databaseController.calculateHoldings = async (req, res, next) => {
               tokenIDsLeft.push(tokenID);
             }
           })
-          holdings.erc721[transaction.contractAddress].tokenID = tokenIDsLeft;
+          holdings.erc721[transaction.contractAddress].tokenIDs = tokenIDsLeft;
 
           if (holdings.erc721[transaction.contractAddress].value === 0) {
             delete holdings.erc721[transaction.contractAddress];
@@ -154,32 +154,7 @@ databaseController.calculateHoldings = async (req, res, next) => {
       }
   }
 
-  // const relevantHoldings = {
-  //   eth: holdings.eth,
-  //   erc20: {},
-  //   erc721: {},
-  // };
-
-  // Object.keys(holdings.erc20).forEach(contractAddress => {
-  //   relevantErc20.forEach(token => {
-  //     if (contractAddress === token.contractAddress) {
-  //       relevantHoldings.erc20[contractAddress] = holdings.erc20[contractAddress];
-  //       relevantHoldings.erc20[contractAddress].tokenImage = token.tokenImage;
-  //     };
-  //   });
-  // });
-
-  // Object.keys(holdings.erc721).forEach(contractAddress => {
-  //   relevantErc721.forEach(nft => {
-  //     if (contractAddress === nft.contractAddress) {
-  //       relevantHoldings.erc721[contractAddress] = holdings.erc721[contractAddress];
-  //       relevantHoldings.erc721[contractAddress].tokenImage = nft.tokenImage;        
-  //     }
-  //   }) 
-  // })
-
   res.locals.holdings = holdings;
-
 
   return next();
 };

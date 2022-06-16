@@ -8,32 +8,31 @@ const erc721ImageScraper = require('../scrapers/erc721ImageScraper');
 const looksRareController = {};
 
 looksRareController.getTokenImage = async (req, res, next) => {
+    
   const walletTransactions = res.locals.walletTransactions;
 
-  await walletTransactions.forEach(async (transaction, index) => {
+  for (const transaction of walletTransactions) {
     if (transaction.contractAddress === '0xb47e3cd837ddf8e4c57f05d70ab865de6e193bbb') {
-        // const imageURI = await erc721ImageScraper.imageScraper(transaction.contractAddress, tran);
-        transaction.imageURI = "https://img.seadn.io/files/8f9108cbbae163f656406ef5826b47d4.png?fit=max&auto=format";
-    }
+      // const imageURI = await erc721ImageScraper.imageScraper(transaction.contractAddress, tran);
+      transaction.imageURI = "https://img.seadn.io/files/8f9108cbbae163f656406ef5826b47d4.png?fit=max&auto=format";
+  }
     else if (transaction.hasOwnProperty('tokenID')) {
 
       const url = `https://api.looksrare.org/api/v1/tokens?collection=${transaction.contractAddress}&tokenId=${transaction.tokenID}`
       
-      axios(url)
-        // .then(data => data.json())
+      await fetch(url)
+        .then(data => data.json())
         .then(response => {
-          transaction.imageURI = response.data.imageURI;
+        transaction.imageURI = response.data.imageURI;
         })
-        .catch(next({
-          message: `error in looksRareController.getTokenImage when fetching imageURI for erc721`,
+        .catch(error => next({
+          log: `error in looksRareController.getTokenImage when fetching imageURI for erc721`,
+          message: `error in looksRareController.getTokenImage when fetching imageURI for erc721 ${error}`
         }))
     }
-    if (index === walletTransactions.length - 1) {
-        console.log(walletTransactions);
-        res.locals.walletTransactions = walletTransactions;
-        return next();
-    }
-  })
+  }
+
+  return next();
 }
 
 module.exports = looksRareController;
