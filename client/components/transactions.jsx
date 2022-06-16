@@ -355,7 +355,7 @@ class Transactions extends Component {
           console.log(sample)
         }
         return (
-            <div id="transactionsContainer">
+            <div id="transactionsContainer" data-testid='transactions'>
                 <h3>Transactions</h3>
                 <div id='tableHeadingsWrapper'>
                     <h5 className="tableHeading">Date</h5>

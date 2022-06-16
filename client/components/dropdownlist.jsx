@@ -119,7 +119,7 @@ const menuItems = whaleTable.map((element, index) => {
  return <MenuItem key={`Menu Item ${index}`} value={element.wallet}>{element.name}</MenuItem>
 })
   return (
-    <div id='dropdown'>
+    <div id='dropdown' data-testid= 'dropdownlist'>
       <Box sx={{ minWidth: 300 }}>
         <FormControl id='form-control' fullWidth>
           <InputLabel id="demo-simple-select-label">Choose a Whale</InputLabel>

@@ -1,2 +1,2 @@
-// module.exports = '';
-export default ''; 
+module.exports = 'test-file-stub';
+// export default ''; 

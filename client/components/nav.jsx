@@ -20,7 +20,7 @@ class Nav extends Component {
 
   render() {
     return (
-
+<div className='navWrapper' data-testid='nav'>
       <div id="navContainer">
         <div id='brandingWrapper'>
           <h1>W H A L E</h1>
@@ -41,6 +41,7 @@ class Nav extends Component {
           <h3>ETH / USD: ${this.state.ethPrice}</h3>
         </div>
       </div>
+    </div> 
     )
   }
 }

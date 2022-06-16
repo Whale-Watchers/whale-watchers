@@ -91,7 +91,7 @@ const Holdings = () => {
     }
 
     return (
-        <div id="holdingsContainer">
+        <div id="holdingsContainer" data-testid="holdings">
             <h3>Holdings</h3>
             <div className="erc721">
                 <div className='nftContainer'>
