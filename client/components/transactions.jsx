@@ -253,11 +253,6 @@ const erc20Images =
         ];
 
 const Transactions = () => {
-  // return ( 
-  //   <div>
-  //     <MainContainer />
-  //   </div> 
-  // ) }
     
       //var nftSorted = [];
 
@@ -267,15 +262,15 @@ const Transactions = () => {
       let sample
       
         
-        // if (nftTransactions=== null) {
-        // sample = <div id='isLoadingWrapper'>
-        //             <Box sx={{ width: '60%' }}>
-        //                 <LinearProgress />
-        //             </Box>
-        //         </div>
-        // }
+        if (nftTransactions=== null) {
+        sample = <div id='isLoadingWrapper'>
+                    <Box sx={{ width: '60%' }}>
+                        <LinearProgress />
+                    </Box>
+                </div>
+        }
         if(nftTransactions!== null){
-          const jayZwalletAddress = '0x3b417faee9d2ff636701100891dc2755b5321cc3';
+          // const jayZwalletAddress = '0x3b417faee9d2ff636701100891dc2755b5321cc3';
           const transactions = [];
           
           nftTransactions.forEach(element=> {

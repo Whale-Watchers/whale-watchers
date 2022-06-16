@@ -37,15 +37,6 @@ const Holdings = () => {
     const nftCardComponents = [];
 
 
-    
-    // if (whale) {
-
-        // const url = `http://localhost:3000/database/getHoldings/${whale}`
-        // axios.get(url).then(res => {
-        //     whaleData.eth = res.data.eth;
-        //     whaleData.erc721 = res.data.erc721;
-        //     whaleData.erc20 = res.data.erc20;
-        // }).then(() => {
         for (let address in nftComponentsERC721) {
             const { tokenName, tokenSymbol, value, tokenDecimal, tokenImage } = nftComponentsERC721[address];
             nftCardComponents.push(
@@ -61,15 +52,15 @@ const Holdings = () => {
             )
         }
 
-    // if (loading) {
-    //     return (
-    //         <div id='isLoadingWrapper'>
-    //             <Box sx={{ width: '60%' }}>
-    //                 <LinearProgress />
-    //             </Box>
-    //         </div>
-    //     )
-    // }
+    if (nftCardComponents.length === 0) {
+        return (
+            <div id='isLoadingWrapper'>
+                <Box sx={{ width: '60%' }}>
+                    <LinearProgress />
+                </Box>
+            </div>
+        )
+    }
 
     return (
         <div>
