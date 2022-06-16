@@ -4,7 +4,7 @@
   "description": "Visualize on-chain holdings and transactions of specific users on the Ethereum blockchain.",
   "main": "esources",
   "scripts": {
-    "test": "npm test",
+    "test": "jest",
     "start": "cross-env NODE_ENV=production node server/server.js",
     "build": "cross-env NODE_ENV=production webpack",
     "dev": "concurrently \"NODE_ENV=development nodemon server/server.js\" \"NODE_ENV=development webpack serve\""
@@ -14,9 +14,17 @@
     "url": "git+https://github.com/Whale-Watchers/whale-watchers.git"
   },
   "keywords": [
-    "etherum",
+    "ethereum",
     "blockchain"
   ],
+  "jest": {
+    "transform": {
+      "\\.[jt]sx?$": "babel-jest"
+    },
+    "moduleNameMapper": {
+      ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "identity-obj-proxy" 
+    }
+  },
   "author": "Maxwell Shick <https://github.com/mshick97>, Jakob <https://github.com/gandalf77>",
   "license": "UNLICENSED",
   "bugs": {
@@ -27,10 +35,13 @@
     "@babel/core": "^7.18.2",
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
+    "@testing-library/react": "^12.1.2",
+    "babel-jest": "^28.1.1",
     "babel-loader": "^8.2.5",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^28.1.1",
     "json-loader": "^0.5.7",
     "sass": "^1.52.2",
     "sass-loader": "^13.0.0",
@@ -45,9 +56,12 @@
     "@emotion/styled": "^11.8.1",
     "@mui/material": "^5.8.3",
     "axios": "^0.27.2",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "concurrently": "^7.2.1",
     "cors": "^2.8.5",
     "express": "^4.18.1",
+    "identity-obj-proxy": "^3.0.0",
     "jwt-decode": "^3.1.2",
     "node-fetch": "^1.7.3",
     "nodemon": "^2.0.16",
@@ -60,6 +74,7 @@
     "react-plotly.js": "^2.5.1",
     "react-router-dom": "^6.3.0",
     "react-scripts": "^5.0.1",
+    "react-test-renderer": "^17.0.2",
     "webpack": "^5.73.0"
   }
 }

@@ -4,7 +4,7 @@ import Nav from './components/nav.jsx';
 import MainContainer from './containers/maincontainer.jsx';
 import DropdownList from './components/dropdownlist';
 import Home from './components/home';
-import Graph from './components/graph';
+// import Graph from './components/graph';
 import Holdings from './components/holdings';
 import Transactions from './components/transactions';
 import jwt_decode from "jwt-decode";
