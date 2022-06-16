@@ -5,7 +5,7 @@ export default function NFTCard(props) {
   const { address, tokenName, tokenSymbol, value, tokenDecimal, tokenImage } = props;
 
   return (
-    <div className='nftWrapper'>
+    <div className='nftWrapper' data-testid='nftcard'>
       <img src={`${tokenImage}`} className='NFT' />
       <p className='tokenDetailsSubHeading'>Token Name: <span className='tokenDetails'>{tokenName}</span></p>
       <p className='tokenDetailsSubHeading'>Token Symbol: <span className='tokenDetails'>{tokenSymbol}</span></p>
