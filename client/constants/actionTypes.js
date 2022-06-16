@@ -13,4 +13,5 @@
 // export const ACTION_DESCRIPTION = "ACTION_DESCRIPTION";
 
 export const SET_WHALE = "SET_WHALE";
+export const GET_ETHER = "GET_ETHER"
 
