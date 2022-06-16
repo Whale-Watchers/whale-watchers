@@ -21,8 +21,9 @@
     "transform": {
       "\\.[jt]sx?$": "babel-jest"
     },
+    "testEnvironment": "jsdom",
     "moduleNameMapper": {
-      ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "identity-obj-proxy" 
+      ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "identity-obj-proxy"
     }
   },
   "author": "Maxwell Shick <https://github.com/mshick97>, Jakob <https://github.com/gandalf77>",
@@ -42,6 +43,7 @@
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
     "jest": "^28.1.1",
+    "jest-environment-jsdom": "^28.1.1",
     "json-loader": "^0.5.7",
     "sass": "^1.52.2",
     "sass-loader": "^13.0.0",
@@ -55,6 +57,7 @@
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@mui/material": "^5.8.3",
+    "@testing-library/jest-dom": "^5.15.0",
     "axios": "^0.27.2",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",

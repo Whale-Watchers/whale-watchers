@@ -22,7 +22,7 @@ class MediaCard extends Component {
           image={image}
           alt="green iguana"
         />
-        <CardContent>
+        <CardContent data-test-id='homecards'>
           <Typography gutterBottom variant="h5" component="div">
             {name}
           </Typography>
