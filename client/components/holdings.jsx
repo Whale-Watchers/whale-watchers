@@ -12,7 +12,6 @@ import MainContainer from '../containers/maincontainer';
 const transactionDataBackend = 'http://localhost:3000/database/getTransactions/'
 const nftComponentsBackend = `http://localhost:3000/database/getHoldings/`
 
-
 const Holdings = () => {
     const dispatch = useDispatch()
     const params = useParams()
@@ -75,7 +74,7 @@ const Holdings = () => {
                     {nftCardComponents}
                 </div>
             </div>
-            <div className="erc70"></div>
+            <div className="erc20"></div>
             <div className="eth"></div>
         </div>
         </div>
