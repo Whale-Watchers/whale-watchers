@@ -16,8 +16,8 @@ const Nav = () => {
         let price;
         const response = await axios.get(url)
         dispatch(actions.setEtherActionCreator(response.data.USD))}
+  
   useEffect(() => getEthPrice(), [])
-
 
     return (
       <div id="navContainer">

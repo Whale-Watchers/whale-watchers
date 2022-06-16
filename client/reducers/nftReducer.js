@@ -27,7 +27,8 @@ import * as types from "../constants/actionTypes";
 
     switch (action.type) {
       case types.SET_WHALE:
-        whale = action.payload
+        console.log(`%c ${action.payload}`, 'background-color: green');
+        whale = action.payload.currentWhale
         console.log('set whale action activated');
 
 

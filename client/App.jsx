@@ -11,31 +11,31 @@ import { Button } from '@mui/material';
 
 const App = () => {
   // Function for using useNavigate hook in class component MainContainer
-  const navigate = useNavigate();
-  let statePlaceHolder = undefined;
-  function navigateToComp(route, state) {
-    console.log('inside the navigateToComp');
-    statePlaceHolder = state;
-    return navigate(route, state)
-  }
+  // const navigate = useNavigate();
+  // let statePlaceHolder = undefined;
+  // function navigateToComp(route, state) {
+  //   console.log('inside the navigateToComp');
+  //   statePlaceHolder = state;
+  //   return navigate(route, state)
+  // }
 
   return (
     <div id="app">
       <Nav />
       <div id='dropdownWrapper'>
-        <DropdownList navigate={navigateToComp} />
+        <DropdownList /* navigate={navigateToComp} */ />
       </div>
       <div id='appContainer'>
-        <MainContainer navigate={navigateToComp} /> {/* prop drill down the function to be invoked */}
+        <MainContainer /* navigate={navigateToComp} */ /> 
         <div id='componentWrapper'>
           <Routes>
-            <Route exact path='/transactions' element={<Transactions parsedState={statePlaceHolder} />}></Route>
+            <Route exact path='/transactions' element={<Transactions /* parsedState={statePlaceHolder} */ />}></Route>
             {/* <Route path='/holdings' element={<Holdings parsedState={statePlaceHolder} />}> */}
             <Route path='holdings' >
-              <Route exact path=':id' element={<Holdings parsedState={statePlaceHolder} />}></Route>
+              <Route exact path=':id' element={<Holdings /* parsedState={statePlaceHolder} */ />}></Route>
             </Route>
 
-            <Route exact path='/graph' element={<Graph parsedState={statePlaceHolder} />}></Route>
+            <Route exact path='/graph' element={<Graph /* parsedState={statePlaceHolder} */ />}></Route>
             <Route exact path='/' element={<Home />}></Route>
           </Routes>
         </div>
