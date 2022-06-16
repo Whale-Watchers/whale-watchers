@@ -5,15 +5,12 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { useNavigate } from 'react-router-dom';
 
-class MediaCard extends Component {
-  constructor(props) {
-    super(props);
 
-  }
-
-  render() {
-    const { name, address, netWorth, image } = this.props;
+const MediaCard = (props) => {
+    const navigate = useNavigate()
+    const { name, address, netWorth, image } = props;
     return (
       <Card sx={{ maxWidth: 370 }}>
         <CardMedia
@@ -40,11 +37,10 @@ class MediaCard extends Component {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small" className='exploreButton'>Explore</Button>
+          <Button onClick={() => navigate(`holdings/${address}`)} size="small" className='exploreButton'>Explore</Button>
         </CardActions>
       </Card >
     );
   }
-}
 
 export default MediaCard
