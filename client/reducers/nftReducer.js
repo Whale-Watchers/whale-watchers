@@ -29,13 +29,13 @@ import * as types from "../constants/actionTypes";
 
     switch (action.type) {
       case types.SET_WHALE:
-        console.log(`%c ${action.payload}`, 'background-color: green');
+        // console.log(`%c ${action.payload}`, 'background-color: green');
         whale = action.payload.currentWhale
         nftComponents = action.payload.nftComponentsData
         dataTransactions = action.payload.transactionData
-        console.log(`%c ${whale}`, 'background-color: pink');
-        console.log(`%c ${nftComponents}`, 'background-color: magenta');
-        console.log(`%c ${dataTransactions}`, 'background-color: blue');
+        // console.log(`%c ${whale}`, 'background-color: pink');
+        // console.log(`%c ${nftComponents}`, 'background-color: magenta');
+        // console.log(`%c ${dataTransactions}`, 'background-color: blue');
 
 // transactionData, nftComponentsData, currentWhale
         return {

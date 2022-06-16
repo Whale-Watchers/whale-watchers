@@ -21,7 +21,7 @@ const Holdings = () => {
         const setWhale = async (walletAddress) => {
             const currentWhale = walletAddress
             const transactionData = await fetch(transactionDataBackend + walletAddress).then(res => res.json())
-            // console.log(`%c ${transactionData[0].hash}`, 'background-color: red');
+            // console.log(`%c ${transactionData}`, 'background-color: red');
             const nftComponentsData = await fetch(nftComponentsBackend + walletAddress).then(res => res.json())
             // console.log(`%c ${nftComponentsData.eth.value}`, 'background-color: magenta');
             const payload = {transactionData, nftComponentsData, currentWhale}
@@ -31,7 +31,7 @@ const Holdings = () => {
     }
     
     const nftComponentsERC721 = useSelector(state => state.nfts.nftComponents.erc721);
-    console.log(`%c ${nftComponentsERC721}`, 'background-color: yellow');
+    // console.log(`%c ${nftComponentsERC721}`, 'background-color: yellow');
     
 
     const nftCardComponents = [];
@@ -72,9 +72,13 @@ const Holdings = () => {
     // }
 
     return (
-        <div id="holdingsContainer">
+        <div>
+            <div id='buttonscontainer'>
+                <MainContainer />
+            </div>
+            <div id="holdingsContainer">
             <h3>Holdings</h3>
-            <MainContainer />
+            
             <div className="erc721">
                 <div className='nftContainer'>
                     {nftCardComponents}
@@ -83,6 +87,8 @@ const Holdings = () => {
             <div className="erc70"></div>
             <div className="eth"></div>
         </div>
+        </div>
+        
     )
 }
 

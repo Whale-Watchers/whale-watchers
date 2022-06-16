@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Box from '@mui/material/Box';
 import LinearProgress from '@mui/material/LinearProgress';
 import MainContainer from '../containers/maincontainer';
+import { useSelector } from 'react-redux';
 
 const nftprices = [
   {
@@ -252,115 +253,124 @@ const erc20Images =
         ];
 
 const Transactions = () => {
-  return ( 
-    <div>
-      <MainContainer />
-    </div> 
-  ) }
-//     render() 
-//       //var nftSorted = [];
-//       console.log('state', this.state)
-//       let sample
+  // return ( 
+  //   <div>
+  //     <MainContainer />
+  //   </div> 
+  // ) }
+    
+      //var nftSorted = [];
+
+      const nftTransactions = useSelector(state => state.nfts.dataTransactions)
+      const whale = useSelector(state => state.nfts.whale)
+      console.log('state', whale)
+      let sample
       
         
-//         // if (this.state.data === null) {
-//         // sample = <div id='isLoadingWrapper'>
-//         //             <Box sx={{ width: '60%' }}>
-//         //                 <LinearProgress />
-//         //             </Box>
-//         //         </div>
-//         // }
-//         if(this.state.data !== null){
-//           const jayZwalletAddress = '0x3b417faee9d2ff636701100891dc2755b5321cc3';
-//           const transactions = [];
+        // if (nftTransactions=== null) {
+        // sample = <div id='isLoadingWrapper'>
+        //             <Box sx={{ width: '60%' }}>
+        //                 <LinearProgress />
+        //             </Box>
+        //         </div>
+        // }
+        if(nftTransactions!== null){
+          const jayZwalletAddress = '0x3b417faee9d2ff636701100891dc2755b5321cc3';
+          const transactions = [];
           
-//           this.state.data.forEach(element=> {
-//             let result;
-//             nftprices.forEach(prices => {
-//               if(element.contractAddress === prices.contractAdress) return result = element
-//             });
-//             if(result) return transactions.push(result);
-//             //return result;
-//           });
+          nftTransactions.forEach(element=> {
+            let result;
+            nftprices.forEach(prices => {
+              if(element.contractAddress === prices.contractAdress) return result = element
+            });
+            if(result) return transactions.push(result);
+            //return result;
+          });
           
-//           this.state.data.forEach(transaction => {
-//             let result;
-//             erc20Images.forEach(erc20 => {
-//               if(transaction.contractAddress === erc20.contractAdress) return result = transaction
-//             });
-//             if(result) return transactions.push(result);
-//             //return result;
-//           });
+          nftTransactions.forEach(transaction => {
+            let result;
+            erc20Images.forEach(erc20 => {
+              if(transaction.contractAddress === erc20.contractAdress) return result = transaction
+            });
+            if(result) return transactions.push(result);
+            //return result;
+          });
 
 
-//           console.log('filtered transactions-->',this.state.data)
-//           sample = this.state.data.map(transactions => {
-//             const date = new Date(transactions.timeStamp * 1000).toLocaleDateString('en-US');
-//             const time = new Date(transactions.timeStamp * 1000).toLocaleTimeString('en-US');
-//             if(transactions.contractAddress === "" && transactions.to === jayZwalletAddress) {
-//                 return(
-//                 <div className='transactions_row'>
-//                 <p>{`${date} ${time}`}</p>
-//                 <p>ETH</p>
-//                 <p>Buy</p>
-//                 </div>
-//                 )
-//             }
-//             else if(transactions.contractAddress === "" && transactions.from === jayZwalletAddress) {
-//              return( <div className="transactions_row">
-//               <p>{`${date} ${time}`}</p>
-//               <p>ETH</p>
-//               <p>Sell</p>
-//               </div>
-//              )
-//           }
+          console.log('filtered transactions-->',nftTransactions)
+          sample = nftTransactions.map(transactions => {
+            const date = new Date(transactions.timeStamp * 1000).toLocaleDateString('en-US');
+            const time = new Date(transactions.timeStamp * 1000).toLocaleTimeString('en-US');
+            if(transactions.contractAddress === "" && transactions.to === whale) {
+                return(
+                <div className='transactions_row'>
+                <p>{`${date} ${time}`}</p>
+                <p>ETH</p>
+                <p>Buy</p>
+                </div>
+                )
+            }
+            else if(transactions.contractAddress === "" && transactions.from === whale) {
+             return( <div className="transactions_row">
+              <p>{`${date} ${time}`}</p>
+              <p>ETH</p>
+              <p>Sell</p>
+              </div>
+             )
+          }
           
-//           else if (transactions.to === jayZwalletAddress) {
-//             return(
-//               <div className='transactions_row'>
-//               <p>{`${date} ${time}`}</p>
-//               <p>{transactions.tokenName}</p>
-//               <p>Buy</p>
-//               </div>
-//               )
-//           }
+          else if (transactions.to === whale) {
+            return(
+              <div className='transactions_row'>
+              <p>{`${date} ${time}`}</p>
+              <p>{transactions.tokenName}</p>
+              <p>Buy</p>
+              </div>
+              )
+          }
 
-//           else if (transactions.from === jayZwalletAddress) {
-//             return(
-//               <div className='transactions_row'>
-//               <p>{`${date} ${time}`}</p>
-//               <p>{transactions.tokenName}</p>
-//               <p>Sell</p>
-//               </div>
-//               )
-//           }
+          else if (transactions.from === whale) {
+            return(
+              <div className='transactions_row'>
+              <p>{`${date} ${time}`}</p>
+              <p>{transactions.tokenName}</p>
+              <p>Sell</p>
+              </div>
+              )
+          }
 
 
 
-//            return (
-//             <div>
+           return (
+            <div>
 
-//            <p>{transactions.timeStamp}</p>
-//            </div>)
-//           })
-//           console.log(sample)
-//         }
-//         return (
-//             <div id="transactionsContainer">
-//                 <h3>Transactions</h3>
-//                 <div id='tableHeadingsWrapper'>
-//                     <h5 className="tableHeading">Date</h5>
-//                     <h5 className="tableHeading">Name of Token</h5>
-//                     <h5 className="tableHeading">Buy/Sell</h5>
-//                     {/* <h5 className="tableHeading">City</h5> */}
-//                 </div>
-//                 <div>
-//                     {sample}
-//                 </div>
-//             </div>
-//         );
-//     }
-// }
+           <p>{transactions.timeStamp}</p>
+           </div>)
+          })
+          console.log(sample)
+        }
+        return (
+          <div>
+            <div id='buttonscontainer'>
+              <MainContainer />
+            </div>
+            <div id="transactionsContainer">
+              <h3>Transactions</h3>
+                <div id='tableHeadingsWrapper'>
+                  <h5 className="tableHeading">Date</h5>
+                  <h5 className="tableHeading">Name of Token</h5>
+                  <h5 className="tableHeading">Buy/Sell</h5>
+              {/* <h5 className="tableHeading">City</h5> */}
+                </div>
+            <div>
+              {sample}
+          </div>
+        </div>
+      </div>
+            
+        );
+    }
+
 /*
 "database/getTransactions/:address"
 filter for the top coins from the NFT JSON file
