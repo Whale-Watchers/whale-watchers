@@ -1,0 +1,84 @@
+{
+  "success": true,
+  "message": null,
+  "data": {
+    "id": 28031761,
+    "collectionAddress": "0xF6980461628CF54a234d39b1c52FeCcfFB5A9407",
+    "tokenId": "24",
+    "tokenURI": "ipfs://QmRMuFvAEWx3VdyWfXPY9Ao5VqaqEgxwmtz4ZYwZuHTKSW/24",
+    "isExplicit": false,
+    "isAnimated": false,
+    "flag": "TRIAGE",
+    "name": "Shiba #24",
+    "description": "SHIBAS, inspired by Doge, are 10,000 unique collectible artwork shiba inu teenagers that love crypto and want to fit in with the punk crowd. Many cute! SHIBAS digital best friends for you, your punky friends, apes, and your collection of cats. Wow! Such NFT!",
+    "attributes": [
+      {
+        "traitType": "Body",
+        "value": "Blonde",
+        "displayType": "string",
+        "count": "49",
+        "floorOrder": null
+      },
+      {
+        "traitType": "Clothing",
+        "value": "K9 Tee",
+        "displayType": "string",
+        "count": "7",
+        "floorOrder": null
+      },
+      {
+        "traitType": "Eyes",
+        "value": "Red Eyes",
+        "displayType": "string",
+        "count": "60",
+        "floorOrder": null
+      },
+      {
+        "traitType": "Eyewear",
+        "value": "Blue Monocle",
+        "displayType": "string",
+        "count": "15",
+        "floorOrder": null
+      },
+      {
+        "traitType": "Hat",
+        "value": "Jamaican Skully",
+        "displayType": "string",
+        "count": "3",
+        "floorOrder": null
+      },
+      {
+        "traitType": "Mouth",
+        "value": "Smile",
+        "displayType": "string",
+        "count": "36",
+        "floorOrder": null
+      },
+      {
+        "traitType": "Tongue",
+        "value": "Hidden",
+        "displayType": "string",
+        "count": "70",
+        "floorOrder": null
+      }
+    ],
+    "collection": {
+      "address": "0xF6980461628CF54a234d39b1c52FeCcfFB5A9407",
+      "owner": "0x77a1A28f8246DA0E919a02a79479bC1591253530",
+      "name": "SHIBASWOW",
+      "description": "SHIBAS, inspired by Doge, are 10,000 unique collectible artwork shiba inu teenagers that love crypto and want to fit in with the punk crowd. Many cute! SHIBAS digital best friends for you, your punky friends, apes, and your collection of cats. Wow! Such NFT!",
+      "symbol": "SHIBASWOW",
+      "type": "ERC721",
+      "websiteLink": null,
+      "facebookLink": null,
+      "twitterLink": null,
+      "instagramLink": null,
+      "telegramLink": null,
+      "mediumLink": null,
+      "discordLink": null,
+      "isVerified": false,
+      "isExplicit": false
+    },
+    "imageURI": "https://looksrare.mo.cloudinary.net/0xF6980461628CF54a234d39b1c52FeCcfFB5A9407/24?resource_type=image&f=auto&c=limit&w=iw&q=auto"
+  }
+}

@@ -24,7 +24,7 @@ class Transactions extends Component {
     render() {
       //var nftSorted = [];
       console.log('state', this.state)
-      let sample
+      let sample;
       const nftprices = [
             {
               "name" : "CryptoPunks",
