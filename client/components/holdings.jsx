@@ -36,19 +36,22 @@ const Holdings = () => {
     const nftCardComponents = [];
 
 
-        for (let address in nftComponentsERC721) {
-            const { tokenName, tokenSymbol, value, tokenDecimal, tokenImage } = nftComponentsERC721[address];
-            nftCardComponents.push(
-                <NFTCard
-                    key={address}
-                    address={address}
-                    tokenName={tokenName}
-                    tokenSymbol={tokenSymbol}
-                    value={value}
-                    tokenDecimal={tokenDecimal}
-                    tokenImage={tokenImage}
-                />
-            )
+        for (let contractAddress in nftComponentsERC721) {
+            const { tokenName, tokenSymbol, value, tokenDecimal, tokenIDs } = nftComponentsERC721[contractAddress];
+            for (const token of tokenIDs){
+                nftCardComponents.push(
+                    <NFTCard
+                        key={`contractAddress${token.tokenID}`}
+                        address={contractAddress}
+                        tokenName={tokenName}
+                        tokenSymbol={tokenSymbol}
+                        value={value}
+                        tokenDecimal={tokenDecimal}
+                        tokenImage={ contractAddress === '0xfb9e9e7150ccebfe42d58de1989c5283d0eaab2e' ? 'https://img.seadn.io/files/51808a3e78e8570ad54702d933f5bbae.png?fit=max&w=600' : token.tokenImage}
+                        tokenID={token.tokenID}
+                    />
+                )
+            }
         }
 
     if (nftCardComponents.length === 0) {
