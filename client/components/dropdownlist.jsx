@@ -4,6 +4,9 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import Autocomplete from '@mui/material/Autocomplete';
+import TextField from '@mui/material/TextField';
+
 import { useNavigate } from "react-router-dom";
 //import whaleTable from '../../server/data/whaleTable.json'
 //const whaleTable = require('../../server/data/whaleTable.json');
@@ -61,6 +64,21 @@ const menuItems = whaleTable.map((element, index) => {
             {menuItems}
           </Select>
         </FormControl>
+      </Box>
+      <Box>
+            <Autocomplete 
+            options={whaleTable.map(obj => {return {label: obj.name, id: obj.wallet}})}
+            disablePortal
+            id="combo-box-demo"
+            sx={{ width: 300 }}
+            renderInput={(params) => {
+              console.log(params)
+              return <TextField {...params} value={'hello'} label="Whale" />}
+            }
+            // {menuItems}
+
+            />
+            
       </Box>
     </div>
   );
