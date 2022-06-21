@@ -12,7 +12,6 @@ import MainContainer from '../containers/maincontainer';
 const transactionDataBackend = 'http://localhost:3000/database/getTransactions/'
 const nftComponentsBackend = `http://localhost:3000/database/getHoldings/`
 
-
 const Holdings = () => {
     const dispatch = useDispatch()
     const params = useParams()
@@ -21,7 +20,7 @@ const Holdings = () => {
         const setWhale = async (walletAddress) => {
             const currentWhale = walletAddress
             const transactionData = await fetch(transactionDataBackend + walletAddress).then(res => res.json())
-            // console.log(`%c ${transactionData[0].hash}`, 'background-color: red');
+            // console.log(`%c ${transactionData}`, 'background-color: red');
             const nftComponentsData = await fetch(nftComponentsBackend + walletAddress).then(res => res.json())
             // console.log(`%c ${nftComponentsData.eth.value}`, 'background-color: magenta');
             const payload = {transactionData, nftComponentsData, currentWhale}
@@ -31,58 +30,58 @@ const Holdings = () => {
     }
     
     const nftComponentsERC721 = useSelector(state => state.nfts.nftComponents.erc721);
-    console.log(`%c ${nftComponentsERC721}`, 'background-color: yellow');
+    // console.log(`%c ${nftComponentsERC721}`, 'background-color: yellow');
     
 
     const nftCardComponents = [];
 
 
-    
-    // if (whale) {
-
-        // const url = `http://localhost:3000/database/getHoldings/${whale}`
-        // axios.get(url).then(res => {
-        //     whaleData.eth = res.data.eth;
-        //     whaleData.erc721 = res.data.erc721;
-        //     whaleData.erc20 = res.data.erc20;
-        // }).then(() => {
-        for (let address in nftComponentsERC721) {
-            const { tokenName, tokenSymbol, value, tokenDecimal, tokenImage } = nftComponentsERC721[address];
-            nftCardComponents.push(
-                <NFTCard
-                    key={address}
-                    address={address}
-                    tokenName={tokenName}
-                    tokenSymbol={tokenSymbol}
-                    value={value}
-                    tokenDecimal={tokenDecimal}
-                    tokenImage={tokenImage}
-                />
-            )
+        for (let contractAddress in nftComponentsERC721) {
+            const { tokenName, tokenSymbol, value, tokenDecimal, tokenIDs } = nftComponentsERC721[contractAddress];
+            for (const token of tokenIDs){
+                nftCardComponents.push(
+                    <NFTCard
+                        key={`contractAddress${token.tokenID}`}
+                        address={contractAddress}
+                        tokenName={tokenName}
+                        tokenSymbol={tokenSymbol}
+                        value={value}
+                        tokenDecimal={tokenDecimal}
+                        tokenImage={ contractAddress === '0xfb9e9e7150ccebfe42d58de1989c5283d0eaab2e' ? 'https://img.seadn.io/files/51808a3e78e8570ad54702d933f5bbae.png?fit=max&w=600' : token.tokenImage}
+                        tokenID={token.tokenID}
+                    />
+                )
+            }
         }
 
-    // if (loading) {
-    //     return (
-    //         <div id='isLoadingWrapper'>
-    //             <Box sx={{ width: '60%' }}>
-    //                 <LinearProgress />
-    //             </Box>
-    //         </div>
-    //     )
-    // }
+    if (nftCardComponents.length === 0) {
+        return (
+            <div id='isLoadingWrapper'>
+                <Box sx={{ width: '60%' }}>
+                    <LinearProgress />
+                </Box>
+            </div>
+        )
+    }
 
     return (
-        <div id="holdingsContainer">
+        <div>
+            <div id='buttonscontainer'>
+                <MainContainer />
+            </div>
+            <div id="holdingsContainer">
             <h3>Holdings</h3>
-            <MainContainer />
+            
             <div className="erc721">
                 <div className='nftContainer'>
                     {nftCardComponents}
                 </div>
             </div>
-            <div className="erc70"></div>
+            <div className="erc20"></div>
             <div className="eth"></div>
         </div>
+        </div>
+        
     )
 }
 
