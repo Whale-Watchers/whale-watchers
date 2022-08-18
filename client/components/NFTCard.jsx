@@ -2,7 +2,7 @@ import React from 'react';
 // import { render } from 'sass';
 
 export default function NFTCard(props) {
-  const { address, tokenName, tokenSymbol, value, tokenDecimal, tokenImage } = props;
+  const { address, tokenName, tokenSymbol, value, tokenDecimal, tokenImage, tokenID } = props;
 
   return (
     <div className='nftWrapper'>

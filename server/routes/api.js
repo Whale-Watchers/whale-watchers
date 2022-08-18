@@ -3,11 +3,20 @@ const express = require("express");
 const router = express.Router();
 const etherscanController = require("../controllers/etherscanController");
 const pricingController = require("../controllers/pricingController");
+const scrapingController = require("../controllers/scrapingController");
+
+// get image URL associated with one speciic tokenID in the contractAddress collection
+router.get(
+  '/scrapeImage/:contractAddress/:tokenID',
+  scrapingController.getErc721Image,
+  (req, res) => {
+    res.status(200).json({tokenImage: res.locals.erc721Image})
+  }
+);
 
 // get all transactions upto present for address
-
 router.get(
-  "/getTransactions/:address",
+  '/getTransactions/:address',
   etherscanController.get721Transactions,
   etherscanController.get20Transactions,
   (req, res) => {
