@@ -6,7 +6,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   margin-top: 50px;
-  background-color: white;
+  background: url('./WhaleWatchersBG.webp');
   min-height: 70vh;
   padding-top: 50px;
   padding-left: 20px;
@@ -17,7 +17,6 @@
   width: 100%;
   margin-bottom: 30px;
 }
-
 #dropdownWrapper {
   display: flex;
   flex: column;
@@ -28,7 +27,7 @@
 
 #toggleCompButtonsWrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
   width: 20%;
 }
